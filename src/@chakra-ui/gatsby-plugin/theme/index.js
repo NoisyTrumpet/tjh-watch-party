@@ -39,8 +39,8 @@ const theme = extendTheme({
     useSystemColorMode: true,
   },
   fonts: {
-    heading: "Montserrat",
-    body: "Montserrat",
+    heading: "Anton",
+    body: "Anton",
   },
 });
 

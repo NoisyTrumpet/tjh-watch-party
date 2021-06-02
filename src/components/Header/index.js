@@ -14,7 +14,7 @@ import { DesktopNavLink } from "./Fragments/NavLink";
 
 const Header = () => {
   return (
-    <Box minH="480px">
+    <Box>
       <Box as="header" bg={mode("white", "gray.800")} borderBottomWidth="1px">
         <Box
           maxW="7xl"
@@ -38,27 +38,36 @@ const Header = () => {
                 }}
                 spacing="8"
               >
-                <DesktopNavLink active>About</DesktopNavLink>
+                {/* <DesktopNavLink active>About</DesktopNavLink>
                 <DesktopNavLink>Fighters</DesktopNavLink>
                 <DesktopNavLink>Sponsors</DesktopNavLink>
-                <DesktopNavLink>Contact</DesktopNavLink>
+                <DesktopNavLink>Contact</DesktopNavLink> */}
               </HStack>
             </HStack>
             <Flex align="center">
               <HStack
                 spacing="8"
                 display={{
-                  base: "none",
+                  base: "flex",
                   md: "flex",
                 }}
               >
-                <Button colorScheme="blue" rounded="full">
+                <Button
+                  bg="primary"
+                  rounded="full"
+                  fontWeight="light"
+                  color="#fff"
+                  letterSpacing="2px"
+                  fontSize="xl"
+                  as="a"
+                  href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                >
                   BUY TICKETS
                 </Button>
               </HStack>
-              <Box ml="5">
+              {/* <Box ml="5">
                 <MobileNav />
-              </Box>
+              </Box> */}
             </Flex>
           </Flex>
         </Box>
