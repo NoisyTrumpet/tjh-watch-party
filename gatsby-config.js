@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "TJH Watch Party",
+    author: "@NoisyTrumpet",
+    description: "TJH Watch Party Barrios Davis",
   },
   plugins: [
     {
@@ -26,6 +28,7 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
