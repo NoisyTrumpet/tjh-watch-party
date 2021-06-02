@@ -21,11 +21,16 @@ module.exports = {
       },
     },
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
+        name: "TJH Watch Party",
         icon: "src/images/icon.png",
+        short_name: `tjh`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
       },
     },
     "@chakra-ui/gatsby-plugin",
