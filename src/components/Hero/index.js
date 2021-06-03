@@ -55,7 +55,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
           pt={[28, 0]}
         >
           <Box width={`100%`} display="grid" placeItems="center">
-            <Box maxWidth={[`170px`, `200px`, `250px`, `275px`, `100%`]}>
+            <Box maxWidth={[`170px`, `200px`, `250px`, `275px`, `400px`]}>
               <Fade bottom>
                 <GatsbyImage
                   image={getImage(logo)}

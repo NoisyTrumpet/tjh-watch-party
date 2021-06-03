@@ -1,25 +1,25 @@
 import * as React from "react";
 import { Box, Stack, StackDivider, Text, Button } from "@chakra-ui/react";
 import Copyright from "./Fragments/Copyright";
-import SocialMediaLinks from "./Fragments/SocialMediaLinks";
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import TJHLogo from "./Fragments/TJHLogo"
+// import { graphql, useStaticQuery } from "gatsby";
 import FooterHeading from "./Fragments/FooterHeading";
-
+import PMXLogo from "./Fragments/PMXLogo";
+// import ThemeToggle from "../ThemeToggle"
 const Footer = () => {
-  const logo = useStaticQuery(graphql`
-    query {
-      logo: contentfulComponentHero {
-        logo {
-          gatsbyImageData(
-            placeholder: BLURRED
-            quality: 90
-            layout: CONSTRAINED
-          )
-        }
-      }
-    }
-  `);
+  // const logo = useStaticQuery(graphql`
+  //   query {
+  //     logo: contentfulComponentHero {
+  //       logo {
+  //         gatsbyImageData(
+  //           placeholder: BLURRED
+  //           quality: 90
+  //           layout: CONSTRAINED
+  //         )
+  //       }
+  //     }
+  //   }
+  // `);
 
   return (
     <Box
@@ -43,13 +43,16 @@ const Footer = () => {
             base: "10",
             lg: "28",
           }}
+          justifyContent={`center`}
         >
-          <Box flex="1">
-            <GatsbyImage
+          <Box >
+          <FooterHeading mb={2}>Sponsored By:</FooterHeading>
+            <TJHLogo />
+            {/* <GatsbyImage
               image={getImage(logo.logo.logo)}
               alt="Thomas J. Henry World Championship Watch Party"
               style={{ maxWidth: `200px` }}
-            />
+            /> */}
           </Box>
           <Stack
             direction={{
@@ -61,28 +64,13 @@ const Footer = () => {
               md: "20",
             }}
           >
-            <Box>
-              <Button
-                bg="primary"
-                rounded="full"
-                fontWeight="light"
-                color="#fff"
-                letterSpacing="2px"
-                fontSize="xl"
-                as="a"
-                href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
-                textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-              >
-                BUY TICKETS
-              </Button>
-            </Box>
-            <Box>
-              <FooterHeading>About</FooterHeading>
+            <Box >
+              <FooterHeading mb={2}>About</FooterHeading>
               <Text>About text goes here</Text>
             </Box>
-            <Box>
-              <FooterHeading>Presented by:</FooterHeading>
-              <Text>PMX Events</Text>
+            <Box maxWidth={200} >
+              <FooterHeading mb={2}>Presented by:</FooterHeading>
+              <PMXLogo style={{maxWidth: `100%`, maxHeight: `54px`}}/>
             </Box>
 
             {/* <LinkGrid
@@ -102,13 +90,10 @@ const Footer = () => {
           </Stack>
         </Stack>
         <Stack
-          direction={{
-            base: "column-reverse",
-            md: "row",
-          }}
-          justifyContent="space-between"
+          justifyContent="center"
           alignItems="center"
         >
+          {/* <ThemeToggle /> */}
           <Copyright alignSelf={`center`} />
           {/* <SocialMediaLinks /> */}
         </Stack>

@@ -70,7 +70,12 @@ export const query = graphql`
     allContentfulBand {
       nodes {
         headshot {
-          gatsbyImageData
+          gatsbyImageData(
+            formats: WEBP
+            layout: CONSTRAINED
+            quality: 100
+            placeholder: BLURRED
+          )
           description
         }
         name
