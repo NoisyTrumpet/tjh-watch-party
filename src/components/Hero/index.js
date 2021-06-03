@@ -104,7 +104,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               py={2}
               textTransform="uppercase"
             >
-              <Text color={`white`} fontSize={[`7xl`]}>
+              <Text color={`white`} fontSize={[`xl`,`2xl`,`4xl`,`7xl`]}>
                 {date}
               </Text>
             </Box>
