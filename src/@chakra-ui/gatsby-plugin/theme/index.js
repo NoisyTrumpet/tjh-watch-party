@@ -35,8 +35,8 @@ const theme = extendTheme({
   },
   breakpoints,
   config: {
-    initialColorMode: "dark",
-    useSystemColorMode: true,
+    initialColorMode: "light",
+    useSystemColorMode: false,
   },
   fonts: {
     heading: "Anton",

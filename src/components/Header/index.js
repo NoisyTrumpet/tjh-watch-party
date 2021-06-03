@@ -8,23 +8,23 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+// import { graphql, useStaticQuery } from "gatsby";
+// import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Header = () => {
-  const logo = useStaticQuery(graphql`
-    query {
-      logo: contentfulComponentHero {
-        logo {
-          gatsbyImageData(
-            placeholder: BLURRED
-            quality: 90
-            layout: CONSTRAINED
-          )
-        }
-      }
-    }
-  `);
+  // const logo = useStaticQuery(graphql`
+  //   query {
+  //     logo: contentfulComponentHero {
+  //       logo {
+  //         gatsbyImageData(
+  //           placeholder: BLURRED
+  //           quality: 90
+  //           layout: CONSTRAINED
+  //         )
+  //       }
+  //     }
+  //   }
+  // `);
   return (
     <Box>
       <Box as="header" bg={mode("white", "gray.800")} borderBottomWidth="1px">
@@ -48,10 +48,10 @@ const Header = () => {
                 <VisuallyHidden>
                   Thomas J. Henry World Championship Watch Party
                 </VisuallyHidden>
-                <GatsbyImage
+                {/* <GatsbyImage
                   image={getImage(logo.logo.logo)}
                   alt={`Thomas J. Henry World Championship Watch Party`}
-                />
+                /> */}
               </Box>
               <HStack
                 display={{

@@ -2,7 +2,6 @@ import { Button } from "@chakra-ui/button";
 import { Box, Heading, Text } from "@chakra-ui/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
-import Logo from "../Header/Fragments/Logo";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
 
@@ -13,7 +12,6 @@ const Hero = ({ fighters, title, date, background, logo }) => {
         <Box
           backgroundColor="#000000"
           color="white"
-          display="flex"
           justifyContent="space-between"
           height={`fit-content`}
           py={4}
@@ -57,7 +55,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
           pt={[28, 0]}
         >
           <Box width={`100%`} display="grid" placeItems="center">
-            <Box maxWidth={[`125px`, `175px`, `100%`]}>
+            <Box maxWidth={[`170px`, `200px`, `250px`, `275px`, `100%`]}>
               <Fade bottom>
                 <GatsbyImage
                   image={getImage(logo)}
@@ -69,7 +67,6 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               <Button
                 bg="primary"
                 rounded="full"
-                fontWeight="light"
                 color="#fff"
                 letterSpacing="2px"
                 fontSize={["2xl", "3xl", "5xl", "7xl"]}
@@ -126,10 +123,31 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`2xl`, `4xl`, `7xl`]}
+                  fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                  letterSpacing="widest"
                 >
                   {date}
+                </Text>
+              </Fade>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`xl`, `2xl`, `3xl`]}
+                  letterSpacing="widest"
+                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                >
+                  Freeman Colliseum
+                </Text>
+              </Fade>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`sm`, `md`, `lg`]}
+                  letterSpacing="widest"
+                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                >
+                  Doors open at 6:00PM
                 </Text>
               </Fade>
             </Box>

@@ -1,18 +1,18 @@
-import { Container } from "@chakra-ui/layout";
-import { graphql } from "gatsby";
 import * as React from "react";
+import { graphql } from "gatsby";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
+import Bands from "../components/Bands";
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   // Hero Data:
   const heroImage = data.contentfulComponentHero.bg_image;
   const fighters = data.contentfulComponentHero.fighterInfo;
   const heroTitle = data.contentfulComponentHero.title;
   const logo = data.contentfulComponentHero.logo;
   const date = data.contentfulComponentHero.date;
+  const bands = data.allContentfulBand;
   return (
     <Layout>
       <Seo title={`Thomas J. Henry Watch Party`} />
@@ -23,6 +23,7 @@ const IndexPage = ({ data }) => {
         logo={logo}
         date={date}
       />
+      <Bands bands={bands} />
     </Layout>
   );
 };
@@ -65,6 +66,15 @@ export const query = graphql`
       }
       date
       ctaLink
+    }
+    allContentfulBand {
+      nodes {
+        headshot {
+          gatsbyImageData
+          description
+        }
+        name
+      }
     }
   }
 `;
