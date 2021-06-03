@@ -10,10 +10,19 @@ const IndexPage = ({ data }) => {
   // Hero Data:
   const heroImage = data.contentfulComponentHero.bg_image;
   const fighters = data.contentfulComponentHero.fighterInfo;
+  const heroTitle = data.contentfulComponentHero.title;
+  const logo = data.contentfulComponentHero.logo;
+  const date = data.contentfulComponentHero.date;
   return (
     <Layout>
       <Seo title={`Thomas J. Henry Watch Party`} />
-      <Hero background={heroImage} fighters={fighters} />
+      <Hero
+        background={heroImage}
+        fighters={fighters}
+        title={heroTitle}
+        logo={logo}
+        date={date}
+      />
     </Layout>
   );
 };
@@ -33,11 +42,12 @@ export const query = graphql`
       }
       logo {
         id
-        file {
-          url
-          fileName
-          contentType
-        }
+        gatsbyImageData(
+          formats: WEBP
+          layout: CONSTRAINED
+          quality: 90
+          placeholder: BLURRED
+        )
       }
       title
       name

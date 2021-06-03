@@ -9,10 +9,25 @@ import {
 } from "@chakra-ui/react";
 
 import Logo from "./Fragments/Logo";
+import { graphql, useStaticQuery } from "gatsby";
 import { MobileNav } from "./Fragments/MobileNav";
 import { DesktopNavLink } from "./Fragments/NavLink";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Header = () => {
+  const logo = useStaticQuery(graphql`
+    query {
+      logo: contentfulComponentHero {
+        logo {
+          gatsbyImageData(
+            placeholder: BLURRED
+            quality: 90
+            layout: CONSTRAINED
+          )
+        }
+      }
+    }
+  `);
   return (
     <Box>
       <Box as="header" bg={mode("white", "gray.800")} borderBottomWidth="1px">
@@ -27,9 +42,14 @@ const Header = () => {
         >
           <Flex as="nav" justify="space-between">
             <HStack spacing="8">
-              <Box as="a" href="#" rel="home">
-                <VisuallyHidden>Envelope app</VisuallyHidden>
-                <Logo />
+              <Box as="a" href="#" rel="home" maxWidth={[`100px`, `150px`, `200px`]}>
+                <VisuallyHidden>
+                  Thomas J. Henry World Championship Watch Party
+                </VisuallyHidden>
+                <GatsbyImage
+                  image={getImage(logo.logo.logo)}
+                  alt={`Thomas J. Henry World Championship Watch Party`}
+                />
               </Box>
               <HStack
                 display={{
