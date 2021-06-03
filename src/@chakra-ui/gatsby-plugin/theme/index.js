@@ -39,8 +39,8 @@ const theme = extendTheme({
     useSystemColorMode: true,
   },
   fonts: {
-    heading: "Univers",
-    body: "Univers",
+    heading: "Anton",
+    body: "Anton",
   },
 });
 
