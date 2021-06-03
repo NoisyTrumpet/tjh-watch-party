@@ -47,9 +47,9 @@ const Hero = ({ fighters, title, date, background, logo }) => {
             </Text>
           </Box>
         </Box>
-        <Box display="grid" placeItems="center" height={`100%`} width={`100%`}>
+        <Box display="grid" placeItems="center" height={`100%`} width={`100%`} pt={[12,0]}>
           <Box width={`100%`} display="grid" placeItems="center">
-            <Box maxWidth={[`175px`, `175px`, `100%`]}>
+            <Box maxWidth={[`125px`, `175px`, `100%`]}>
               <GatsbyImage
                 image={getImage(logo)}
                 alt={"Thomas J. Henry World Championship Watch Party"}

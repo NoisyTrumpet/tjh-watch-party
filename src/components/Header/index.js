@@ -8,10 +8,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react";
 
-import Logo from "./Fragments/Logo";
 import { graphql, useStaticQuery } from "gatsby";
-import { MobileNav } from "./Fragments/MobileNav";
-import { DesktopNavLink } from "./Fragments/NavLink";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Header = () => {
