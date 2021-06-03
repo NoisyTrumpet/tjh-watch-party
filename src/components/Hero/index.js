@@ -3,6 +3,8 @@ import { Box, Heading, Text } from "@chakra-ui/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Logo from "../Header/Fragments/Logo";
+import Fade from "react-reveal/Fade";
+import Tada from "react-reveal/Tada";
 
 const Hero = ({ fighters, title, date, background, logo }) => {
   return (
@@ -47,30 +49,41 @@ const Hero = ({ fighters, title, date, background, logo }) => {
             </Text>
           </Box>
         </Box>
-        <Box display="grid" placeItems="center" height={`100%`} width={`100%`} pt={[28,0]}>
+        <Box
+          display="grid"
+          placeItems="center"
+          height={`100%`}
+          width={`100%`}
+          pt={[28, 0]}
+        >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box maxWidth={[`125px`, `175px`, `100%`]}>
-              <GatsbyImage
-                image={getImage(logo)}
-                alt={"Thomas J. Henry World Championship Watch Party"}
-              />
+              <Fade bottom>
+                <GatsbyImage
+                  image={getImage(logo)}
+                  alt={"Thomas J. Henry World Championship Watch Party"}
+                />
+              </Fade>
             </Box>
-            <Button
-              bg="primary"
-              rounded="full"
-              fontWeight="light"
-              color="#fff"
-              letterSpacing="2px"
-              fontSize={["2xl", "3xl", "5xl", "7xl"]}
-              px={[6, 8, 10, 12]}
-              py={[8, 10, 12, 14]}
-              mt={4}
-              as="a"
-              fontWeight={900}
-              href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
-            >
-              BUY TICKETS
-            </Button>
+            <Tada>
+              <Button
+                bg="primary"
+                rounded="full"
+                fontWeight="light"
+                color="#fff"
+                letterSpacing="2px"
+                fontSize={["2xl", "3xl", "5xl", "7xl"]}
+                px={[6, 8, 10, 12]}
+                py={[8, 10, 12, 14]}
+                mt={4}
+                as="a"
+                fontWeight={900}
+                href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+              >
+                BUY TICKETS
+              </Button>
+            </Tada>
             <Box maxWidth={300} backgroundColor={`primary`}>
               <Heading
                 as="h1"
@@ -92,10 +105,16 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               mt={4}
               textTransform="uppercase"
             >
-              <Text fontSize={[`xl`, `xl`, `3xl`]} >{title}</Text>
+              <Fade bottom cascade>
+                <Text
+                  fontSize={[`xl`, `xl`, `3xl`]}
+                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                >
+                  {title}
+                </Text>
+              </Fade>
             </Box>
             <Box
-              backgroundColor={["blackAlpha.700", `transparent`]}
               textAlign="center"
               color="secondary"
               fontWeight={300}
@@ -104,9 +123,15 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               py={2}
               textTransform="uppercase"
             >
-              <Text color={`white`} fontSize={[`xl`,`2xl`,`4xl`,`7xl`]}>
-                {date}
-              </Text>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`2xl`, `4xl`, `7xl`]}
+                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                >
+                  {date}
+                </Text>
+              </Fade>
             </Box>
           </Box>
         </Box>

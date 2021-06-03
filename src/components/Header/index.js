@@ -39,7 +39,12 @@ const Header = () => {
         >
           <Flex as="nav" justify="space-between">
             <HStack spacing="8">
-              <Box as="a" href="#" rel="home" maxWidth={[`100px`, `150px`, `200px`]}>
+              <Box
+                as="a"
+                href="#"
+                rel="home"
+                maxWidth={[`100px`, `150px`, `200px`]}
+              >
                 <VisuallyHidden>
                   Thomas J. Henry World Championship Watch Party
                 </VisuallyHidden>
@@ -78,6 +83,7 @@ const Header = () => {
                   fontSize="xl"
                   as="a"
                   href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                 >
                   BUY TICKETS
                 </Button>
