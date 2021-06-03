@@ -47,7 +47,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
             </Text>
           </Box>
         </Box>
-        <Box display="grid" placeItems="center" height={`100%`} width={`100%`} pt={[12,0]}>
+        <Box display="grid" placeItems="center" height={`100%`} width={`100%`} pt={[28,0]}>
           <Box width={`100%`} display="grid" placeItems="center">
             <Box maxWidth={[`125px`, `175px`, `100%`]}>
               <GatsbyImage
@@ -82,7 +82,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               </Heading>
             </Box>
             <Box
-              backgroundColor="#000000"
+              backgroundColor={["blackAlpha.700", `#000000`]}
               textAlign="center"
               color="secondary"
               fontWeight={300}
@@ -92,7 +92,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               mt={4}
               textTransform="uppercase"
             >
-              <Text fontSize={[`xl`, `xl`, `3xl`]}>{title}</Text>
+              <Text fontSize={[`xl`, `xl`, `3xl`]} >{title}</Text>
             </Box>
             <Box
               backgroundColor={["blackAlpha.700", `transparent`]}
