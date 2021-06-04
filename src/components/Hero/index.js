@@ -170,14 +170,15 @@ const Hero = ({ fighters, title, date, background, logo }) => {
             </Box>
             <Tada>
               <Button
-                bg="primary"
-                rounded="full"
+                bg="tjhRed"
+                // rounded="full"
                 color="#fff"
                 letterSpacing="2px"
                 fontSize={["2xl", "3xl", "5xl", "7xl"]}
                 px={[6, 8, 10, 12]}
                 py={[8, 10, 12, 14]}
-                my={4}
+                mt={0}
+                mb={4}
                 as="a"
                 fontWeight={900}
                 href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
@@ -192,7 +193,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
 
       <Box display="grid" style={{ gridArea: "1/1" }}>
         <GatsbyImage
-          image={getImage(background)}
+          image={background}
           alt="Title"
           style={{ gridArea: "1/1" }}
         />
