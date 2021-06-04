@@ -4,11 +4,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
+import "./hero.scss"
 
-const Hero = ({ fighters, title, date, background, logo }) => {
+const Hero = ({ fighters, title, date, background, logo, vs }) => {
   return (
     <Box display="grid">
-      <Box style={{ gridArea: "1/1" }} zIndex={9}>
+      <Box style={{ gridArea: "1/1" }} zIndex={9} height={`fit-content`}>
         {/* <Box
           backgroundColor="#000000"
           color="white"
@@ -51,11 +52,17 @@ const Hero = ({ fighters, title, date, background, logo }) => {
           display="grid"
           placeItems="center"
           height={`100%`}
-          width={`100%`}
-          pt={[28, 10]}
+          width={`60vw`}
+          py={[3, 5, 5, 5]}
+          my={[`7%`, `10%`, `10%`, `1%`, `3%`]}
+          mx={`auto`}
         >
           <Box width={`100%`} display="grid" placeItems="center">
-            <Box maxWidth={[`170px`, `200px`, `250px`, `275px`, `400px`]}>
+            <Box
+              maxWidth={[`120px`, `200px`, `250px`, `250px`, `400px`]}
+              mx={`auto`}
+              py={1}
+            >
               <Fade bottom>
                 <GatsbyImage
                   image={getImage(logo)}
@@ -74,34 +81,48 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               </Heading>
             </Box>
             <Box
-              textAlign="center"
-              color="secondary"
-              fontWeight={300}
-              height={200}
-              px={4}
-              py={2}
-              textTransform="uppercase"
-            ></Box>
+              maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
+              pb={3}
+            >
+            <Fade bottom>
+                <GatsbyImage
+                  image={vs}
+                  alt={"VS logo"}
+                />
+              </Fade>
+            </Box>
             <Box
               textAlign="center"
               color="secondary"
               fontWeight={300}
-              width={`fit-content`}
+              // width={`fit-content`}
               px={4}
-              py={1}
+              py={[0, 1, 1, 1]}
               mt={0}
-              mb={-2}
+              mb={[0, -2, -1, -1]}
               textTransform="uppercase"
             >
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`1xl`, `3xl`, `4xl`]}
-                  // letterSpacing="widest"
+                  fontSize={[`md`, `2xl`, `3xl`, `4xl`, `5xl`]}
+                  letterSpacing="widest"
+                  lineHeight={1}
                   fontWeight={800}
                   textShadow={`0 5px 1px rgb(0 0 1 / 100%)`}
                 >
                   Freeman Colliseum
+                </Text>
+              </Fade>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
+                  letterSpacing="widest"
+                  fontWeight={800}
+                  textShadow={`0 5px 1px rgb(0 0 1 / 100%)`}
+                >
+                  San Antonio, Texas
                 </Text>
               </Fade>
             </Box>
@@ -110,15 +131,15 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               textAlign="center"
               color="secondary"
               fontWeight={300}
-              width={`fit-content`}
-              px={4}
-              py={1}
+              // width={`fit-content`}
+              px={[2, 4, 6, 4]}
+              py={[1, 1, 2, 2]}
               my={0}
               textTransform="uppercase"
             >
               <Fade bottom cascade>
                 <Text
-                  fontSize={[`xl`, `xl`, `3xl`]}
+                  fontSize={[`10px`, `sm`, `lg`, `2xl`, `3xl`]}
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                 >
                   {title}
@@ -129,17 +150,17 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               textAlign="center"
               color="secondary"
               fontWeight={300}
-              width={`fit-content`}
+              // width={`fit-content`}
               px={4}
-              py={1}
-              mt={-4}
+              py={[0, 1, 1, 1]}
+              mt={[-2, -2, -2, -5, -5]}
               mb={0}
               textTransform="uppercase"
             >
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
+                  fontSize={[`2xl`, `3xl`, `5xl`, `7xl`, `8xl`]}
                   textShadow={`0 6px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   fontWeight={"900"}
@@ -147,26 +168,6 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                   {date}
                 </Text>
               </Fade>
-              {/* <Fade bottom>
-                <Text
-                  color={`white`}
-                  fontSize={[`xl`, `2xl`, `3xl`]}
-                  letterSpacing="widest"
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-                >
-                  Freeman Colliseum
-                </Text>
-              </Fade>
-              <Fade bottom>
-                <Text
-                  color={`white`}
-                  fontSize={[`sm`, `md`, `lg`]}
-                  letterSpacing="widest"
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-                >
-                  Doors open at 6:00PM
-                </Text>
-              </Fade> */}
             </Box>
             <Tada>
               <Button
@@ -174,11 +175,11 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                 // rounded="full"
                 color="#fff"
                 letterSpacing="2px"
-                fontSize={["2xl", "3xl", "5xl", "7xl"]}
-                px={[6, 8, 10, 12]}
-                py={[8, 10, 12, 14]}
-                mt={0}
-                mb={4}
+                fontSize={["md", "2xl", "3xl", "4xl", "5xl"]}
+                lineHeight={1}
+                px={[4, 4, 6, 10]}
+                py={[4, 4, 6, 10]}
+                my={0}
                 as="a"
                 fontWeight={900}
                 href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
@@ -191,8 +192,9 @@ const Hero = ({ fighters, title, date, background, logo }) => {
         </Box>
       </Box>
 
-      <Box display="grid" style={{ gridArea: "1/1" }}>
+      <Box display="grid"  style={{ gridArea: "1/1" }}>
         <GatsbyImage
+          className="art-directed"
           image={background}
           alt="Title"
           style={{ gridArea: "1/1" }}
