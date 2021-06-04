@@ -81,8 +81,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               px={4}
               py={2}
               textTransform="uppercase"
-            >
-            </Box>
+            ></Box>
             <Box
               textAlign="center"
               color="secondary"
@@ -143,7 +142,7 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                   fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
                   textShadow={`0 6px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
-                  fontWeight={'900'}
+                  fontWeight={"900"}
                 >
                   {date}
                 </Text>

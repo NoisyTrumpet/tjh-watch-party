@@ -1,7 +1,7 @@
 import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../../@chakra-ui/gatsby-plugin/theme";
-import "@fontsource/anton";
+import "@fontsource/saira-semi-condensed";
 // import Header from "../Header";
 import Footer from "../Footer";
 

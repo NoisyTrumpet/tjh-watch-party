@@ -36,7 +36,6 @@ const theme = extendTheme({
   breakpoints,
   config: {
     initialColorMode: "light",
-
   },
   fonts: {
     heading: "'Saira Semi Condensed', sans-serif",
