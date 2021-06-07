@@ -1,3 +1,58 @@
 // .art-directed img {
 //     height: auto;
 // }
+
+@media screen and (min-width: 1300px) {
+    .contBGspace {
+        margin-top: .5%;
+        margin-bottom: 1%;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .contBGspace {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+@media screen and (max-width: 840px) {
+    .contBGspace {
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contBGspace {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+}
+@media screen and (max-width: 680px) {
+    .contBGspace {
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .contBGspace {
+        margin-top: 14%;
+        margin-bottom: 14%;
+    }
+}
+@media screen and (max-width: 524px) {
+    .contBGspace {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .contBGspace {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .contBGspace {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+}

@@ -9,9 +9,11 @@ const Bands = ({ bands }) => {
       <Text
         textAlign="center"
         letterSpacing="widest"
-        fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
+        fontSize={[`2xl`, `2xl`, `4xl`, `6xl`]}
         textTransform={`uppercase`}
         color={`primary`}
+        w={"98%"}
+        mx={"auto"}
       >
         With Musical Performances By:
       </Text>

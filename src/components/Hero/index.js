@@ -54,8 +54,8 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
           height={`100%`}
           width={`60vw`}
           py={[3, 5, 5, 5]}
-          my={[`7%`, `10%`, `10%`, `1%`, `3%`]}
           mx={`auto`}
+          className="contBGspace"
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
