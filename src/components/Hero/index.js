@@ -80,7 +80,6 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 Thomas J. Henry World Championship Watch Party
               </Heading>
             </Box>
-<<<<<<< HEAD
             <Box
               maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
               pb={[2, 3]}
@@ -91,11 +90,6 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   image={vs}
                   alt={"VS logo"}
                 />
-=======
-            <Box maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]} pb={3}>
-              <Fade bottom>
-                <GatsbyImage image={vs} alt={"VS logo"} />
->>>>>>> 878dad33904d143ff6f74250d85496962f7605c4
               </Fade>
             </Box>
             <Box
@@ -202,7 +196,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 my={0}
                 as="a"
                 fontWeight={900}
-                href="https://purchase.growtix.com/eh/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                href="https://purchase.growtix.com/eh/TJH_WATCH_PARTY"
                 textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
               >
                 BUY TICKETS
