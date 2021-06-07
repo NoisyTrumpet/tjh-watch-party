@@ -9,7 +9,7 @@ const Bands = ({ bands }) => {
       <Text
         textAlign="center"
         letterSpacing="widest"
-        fontSize={[`2xl`, `2xl`, `4xl`]}
+        fontSize={[`xl`, `2xl`, `4xl`]}
         textTransform={`uppercase`}
         color={`primary`}
         w={"98%"}
