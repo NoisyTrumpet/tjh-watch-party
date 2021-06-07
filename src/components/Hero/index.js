@@ -4,12 +4,13 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
+import "./hero.scss"
 
-const Hero = ({ fighters, title, date, background, logo }) => {
+const Hero = ({ fighters, title, date, background, logo, vs }) => {
   return (
     <Box display="grid">
-      <Box style={{ gridArea: "1/1" }} zIndex={9}>
-        <Box
+      <Box style={{ gridArea: "1/1" }} zIndex={9} height={`fit-content`}>
+        {/* <Box
           backgroundColor="#000000"
           color="white"
           justifyContent="space-between"
@@ -46,16 +47,22 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               {fighters[1].name}
             </Text>
           </Box>
-        </Box>
+        </Box> */}
         <Box
           display="grid"
           placeItems="center"
           height={`100%`}
-          width={`100%`}
-          pt={[28, 0]}
+          width={`60vw`}
+          py={[3, 5, 5, 5]}
+          mx={`auto`}
+          className="contBGspace"
         >
           <Box width={`100%`} display="grid" placeItems="center">
-            <Box maxWidth={[`170px`, `200px`, `250px`, `275px`, `400px`]}>
+            <Box
+              maxWidth={[`120px`, `200px`, `250px`, `250px`, `400px`]}
+              mx={`auto`}
+              py={1}
+            >
               <Fade bottom>
                 <GatsbyImage
                   image={getImage(logo)}
@@ -63,24 +70,6 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                 />
               </Fade>
             </Box>
-            <Tada>
-              <Button
-                bg="primary"
-                rounded="full"
-                color="#fff"
-                letterSpacing="2px"
-                fontSize={["2xl", "3xl", "5xl", "7xl"]}
-                px={[6, 8, 10, 12]}
-                py={[8, 10, 12, 14]}
-                mt={4}
-                as="a"
-                fontWeight={900}
-                href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
-                textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-              >
-                BUY TICKETS
-              </Button>
-            </Tada>
             <Box maxWidth={300} backgroundColor={`primary`}>
               <Heading
                 as="h1"
@@ -92,51 +81,43 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               </Heading>
             </Box>
             <Box
-              backgroundColor={["blackAlpha.700", `#000000`]}
-              textAlign="center"
-              color="secondary"
-              fontWeight={300}
-              width={`fit-content`}
-              px={4}
-              py={2}
-              mt={4}
-              textTransform="uppercase"
+              maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
+              pb={3}
             >
-              <Fade bottom cascade>
-                <Text
-                  fontSize={[`xl`, `xl`, `3xl`]}
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-                >
-                  {title}
-                </Text>
+            <Fade bottom>
+                <GatsbyImage
+                  image={vs}
+                  alt={"VS logo"}
+                />
               </Fade>
             </Box>
             <Box
               textAlign="center"
               color="secondary"
               fontWeight={300}
-              width={`fit-content`}
+              // width={`fit-content`}
               px={4}
-              py={2}
+              py={[0, 1, 1, 1]}
+              mt={0}
+              mb={[0, -2, -1, -1]}
               textTransform="uppercase"
             >
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                  fontSize={[`md`, `2xl`, `3xl`, `4xl`, `5xl`]}
                   letterSpacing="widest"
                   lineHeight={1}
                   fontWeight={800}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                 >
-                  {date}
+                  Freeman Colliseum
                 </Text>
               </Fade>
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`xl`, `2xl`, `3xl`]}
+                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
@@ -161,33 +142,61 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                   fontSize={[`10px`, `sm`, `lg`, `2xl`, `3xl`]}
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                 >
-                  Freeman Colliseum
+                  {title}
                 </Text>
               </Fade>
+            </Box>
+            <Box
+              textAlign="center"
+              color="secondary"
+              fontWeight={300}
+              // width={`fit-content`}
+              px={4}
+              py={[0, 1, 1, 1]}
+              mt={[-2, -2, -2, -5, -5]}
+              mb={0}
+              textTransform="uppercase"
+            >
               <Fade bottom>
                 <Text
                   color={`white`}
                   mt={4}
                   fontSize={[`2xl`, `3xl`, `5xl`]}
-                  textShadow={`0 3px 1px rgba(0 0 1 / 100%)`}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   fontWeight={"900"}
                 >
-                  Doors open at 6:00PM
+                  {date}
                 </Text>
               </Fade>
             </Box>
+            <Tada>
+              <Button
+                bg="tjhRed"
+                // rounded="full"
+                color="#fff"
+                letterSpacing="2px"
+                fontSize={["md", "2xl", "3xl", "4xl", "5xl"]}
+                lineHeight={1}
+                px={[4, 4, 6, 10]}
+                py={[4, 4, 6, 10]}
+                my={0}
+                as="a"
+                fontWeight={900}
+                href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+              >
+                BUY TICKETS
+              </Button>
+            </Tada>
           </Box>
         </Box>
       </Box>
 
-      <Box
-        display="grid"
-        style={{ gridArea: "1/1", maxWidth: "100%" }}
-        position="relative"
-      >
+      <Box display="grid"  style={{ gridArea: "1/1" }}>
         <GatsbyImage
-          image={getImage(background)}
+          className="art-directed"
+          image={background}
           alt="Title"
           style={{ gridArea: "1/1", maxWidth: "100%" }}
         />

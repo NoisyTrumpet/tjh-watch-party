@@ -12,6 +12,8 @@ const Bands = ({ bands }) => {
         fontSize={[`2xl`, `2xl`, `4xl`]}
         textTransform={`uppercase`}
         color={`primary`}
+        w={"98%"}
+        mx={"auto"}
       >
         With Musical Performances By:
       </Text>
@@ -36,11 +38,7 @@ const Bands = ({ bands }) => {
             </Box>
 
             <Box>
-              <GatsbyImage
-                image={getImage(band.headshot)}
-                alt={band.name}
-                style={{ maxWidth: `250px` }}
-              />
+              <GatsbyImage image={getImage(band.headshot)} alt={band.name} style={{maxWidth: `250px`}}/>
             </Box>
           </Grid>
         ))}

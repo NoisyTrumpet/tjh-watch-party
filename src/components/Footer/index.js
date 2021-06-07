@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Box, Stack, StackDivider, Text, Button } from "@chakra-ui/react";
+import { Box, Stack, StackDivider, Text } from "@chakra-ui/react";
 import Copyright from "./Fragments/Copyright";
 import TJHLogo from "./Fragments/TJHLogo";
 // import { graphql, useStaticQuery } from "gatsby";
@@ -66,13 +66,7 @@ const Footer = () => {
           >
             <Box>
               <FooterHeading mb={2}>About</FooterHeading>
-              <Text>
-                Thomas J Henry Watch Party featuring Davis V Barrios WBA Super
-                Lightweight Championship Live on Showtime PPV on Saturday, June
-                26, 2021, in the Freeman Coliseum with entertainment by Grammy
-                award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds
-                benefit the Boys and Girls Club of San Antonio.
-              </Text>
+              <Text>Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin.Proceeds benefit the Boys and Girls Club of San Antonio.</Text>
             </Box>
             <Box maxWidth={200}>
               <FooterHeading mb={2}>Presented by:</FooterHeading>

@@ -4,10 +4,20 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Bands from "../components/Bands";
+import Logos from "../components/Logos";
+import { withArtDirection, getImage } from "gatsby-plugin-image";
 
 const IndexPage = ({ data }) => {
   // Hero Data:
-  const heroImage = data.contentfulComponentHero.bg_image;
+  const mobileImageGet = getImage(data.mobileImage.childImageSharp);
+  const desktopImageGet = getImage(data.contentfulComponentHero.bg_image);
+  const heroImages = withArtDirection(desktopImageGet, [
+    {
+      media: "(max-width: 1024px)",
+      image: mobileImageGet,
+    },
+  ]);
+  const vs = getImage(data.vsImage.childImageSharp);
   const fighters = data.contentfulComponentHero.fighterInfo;
   const heroTitle = data.contentfulComponentHero.title;
   const logo = data.contentfulComponentHero.logo;
@@ -17,12 +27,14 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo title={`Thomas J. Henry Watch Party`} />
       <Hero
-        background={heroImage}
+        background={heroImages}
         fighters={fighters}
         title={heroTitle}
         logo={logo}
         date={date}
+        vs={vs}
       />
+      <Logos />
       <Bands bands={bands} />
     </Layout>
   );
@@ -32,6 +44,28 @@ export default IndexPage;
 
 export const query = graphql`
   query HomeQuery {
+    mobileImage: file(relativePath: {eq: "bg_mobile.jpg"}) {
+    id
+    childImageSharp {
+      gatsbyImageData(
+        quality: 90
+        layout: CONSTRAINED
+        formats: WEBP
+        placeholder: BLURRED
+      )
+    }
+  }
+  vsImage: file(relativePath: {eq: "vs.png"}) {
+    id
+    childImageSharp {
+      gatsbyImageData(
+        quality: 90
+        layout: CONSTRAINED
+        formats: WEBP
+        placeholder: BLURRED
+      )
+    }
+  }
     contentfulComponentHero {
       bg_image {
         gatsbyImageData(

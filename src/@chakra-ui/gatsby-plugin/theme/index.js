@@ -38,8 +38,8 @@ const theme = extendTheme({
     initialColorMode: "light",
   },
   fonts: {
-    heading: "Anton",
-    body: "Anton",
+    heading: "'Saira Semi Condensed', sans-serif",
+    body: "'Saira Semi Condensed', sans-serif",
   },
 });
 
