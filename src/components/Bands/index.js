@@ -6,15 +6,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const Bands = ({ bands }) => {
   return (
     <Box w={`100vw`}>
-      <Box bgColor="black" p={2}>
+      <Box bgColor="black" p={4}>
         <Text
           color="#fff"
           textAlign="center"
           as="h2"
-          maxW={`300px`}
+          maxW={`100%`}
           mx={`auto`}
           textTransform="uppercase"
-          fontSize={[`2xl`, `3xl`, `5xl`]}
+          fontSize={[`2xl`, `4xl`, `5xl`]}
           fontWeight={"900"}
         >
           Post Fight Concert Starring
