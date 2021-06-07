@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Stack, StackDivider, Text, Button } from "@chakra-ui/react";
 import Copyright from "./Fragments/Copyright";
-import TJHLogo from "./Fragments/TJHLogo"
+import TJHLogo from "./Fragments/TJHLogo";
 // import { graphql, useStaticQuery } from "gatsby";
 import FooterHeading from "./Fragments/FooterHeading";
 import PMXLogo from "./Fragments/PMXLogo";
@@ -45,8 +45,8 @@ const Footer = () => {
           }}
           justifyContent={`center`}
         >
-          <Box >
-          <FooterHeading mb={2}>Sponsored By:</FooterHeading>
+          <Box>
+            <FooterHeading mb={2}>Sponsored By:</FooterHeading>
             <TJHLogo />
             {/* <GatsbyImage
               image={getImage(logo.logo.logo)}
@@ -64,13 +64,19 @@ const Footer = () => {
               md: "20",
             }}
           >
-            <Box >
+            <Box>
               <FooterHeading mb={2}>About</FooterHeading>
-              <Text>About text goes here</Text>
+              <Text>
+                Thomas J Henry Watch Party featuring Davis V Barrios WBA Super
+                Lightweight Championship Live on Showtime PPV on Saturday, June
+                26, 2021, in the Freeman Coliseum with entertainment by Grammy
+                award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds
+                benefit the Boys and Girls Club of San Antonio.
+              </Text>
             </Box>
-            <Box maxWidth={200} >
+            <Box maxWidth={200}>
               <FooterHeading mb={2}>Presented by:</FooterHeading>
-              <PMXLogo style={{maxWidth: `100%`, maxHeight: `54px`}}/>
+              <PMXLogo style={{ maxWidth: `100%`, maxHeight: `54px` }} />
             </Box>
 
             {/* <LinkGrid
@@ -89,10 +95,7 @@ const Footer = () => {
           /> */}
           </Stack>
         </Stack>
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-        >
+        <Stack justifyContent="center" alignItems="center">
           {/* <ThemeToggle /> */}
           <Copyright alignSelf={`center`} />
           {/* <SocialMediaLinks /> */}

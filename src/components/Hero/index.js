@@ -126,6 +126,9 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                   fontSize={[`2xl`, `2xl`, `4xl`, `7xl`]}
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                   letterSpacing="widest"
+                  lineHeight={1}
+                  fontWeight={800}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                 >
                   {date}
                 </Text>
@@ -135,6 +138,27 @@ const Hero = ({ fighters, title, date, background, logo }) => {
                   color={`white`}
                   fontSize={[`xl`, `2xl`, `3xl`]}
                   letterSpacing="widest"
+                  fontWeight={800}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                >
+                  San Antonio, Texas
+                </Text>
+              </Fade>
+            </Box>
+            <Box
+              backgroundColor={["blackAlpha.700", `#000000`]}
+              textAlign="center"
+              color="secondary"
+              fontWeight={300}
+              // width={`fit-content`}
+              px={[2, 4, 6, 4]}
+              py={[1, 1, 2, 2]}
+              my={0}
+              textTransform="uppercase"
+            >
+              <Fade bottom cascade>
+                <Text
+                  fontSize={[`10px`, `sm`, `lg`, `2xl`, `3xl`]}
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                 >
                   Freeman Colliseum
@@ -143,9 +167,11 @@ const Hero = ({ fighters, title, date, background, logo }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`sm`, `md`, `lg`]}
-                  letterSpacing="widest"
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                  mt={4}
+                  fontSize={[`2xl`, `3xl`, `5xl`]}
+                  textShadow={`0 3px 1px rgba(0 0 1 / 100%)`}
+                  // letterSpacing="widest"
+                  fontWeight={"900"}
                 >
                   Doors open at 6:00PM
                 </Text>
@@ -155,11 +181,15 @@ const Hero = ({ fighters, title, date, background, logo }) => {
         </Box>
       </Box>
 
-      <Box display="grid" style={{ gridArea: "1/1" }}>
+      <Box
+        display="grid"
+        style={{ gridArea: "1/1", maxWidth: "100%" }}
+        position="relative"
+      >
         <GatsbyImage
           image={getImage(background)}
           alt="Title"
-          style={{ gridArea: "1/1" }}
+          style={{ gridArea: "1/1", maxWidth: "100%" }}
         />
       </Box>
     </Box>

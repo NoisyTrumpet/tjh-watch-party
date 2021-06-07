@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from "react";
 
 function PMXLogo(props) {
   return (
@@ -45,7 +45,7 @@ function PMXLogo(props) {
         </g>
       </g>
     </svg>
-  )
+  );
 }
 
-export default PMXLogo
+export default PMXLogo;
