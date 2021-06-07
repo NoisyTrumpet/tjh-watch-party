@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 import React from "react";
 // import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
