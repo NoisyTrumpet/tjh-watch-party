@@ -1,4 +1,4 @@
-import { Box, Text, Grid, Container } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/layout";
 import React from "react";
 // import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -21,11 +21,11 @@ const Bands = ({ bands }) => {
         </Text>
       </Box>
       {bands.nodes.map((band) => (
-      <GatsbyImage
-        image={getImage(band.largeGraphic)}
-        alt={band.name}
-        style={{ maxWidth: `100vw` }}
-      />
+        <GatsbyImage
+          image={getImage(band.largeGraphic)}
+          alt={band.name}
+          style={{ maxWidth: `100vw` }}
+        />
       ))}
     </Box>
     // <Box my={4}>
@@ -47,7 +47,7 @@ const Bands = ({ bands }) => {
     //         placeItems={`center`}
     //         templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
     //       >
-            
+
     //         <Box display={`grid`} px={[4, 8, 12]}>
     //           <Text
     //             letterSpacing="widest"
@@ -67,7 +67,7 @@ const Bands = ({ bands }) => {
     //             alt={band.name}
     //             style={{ maxWidth: `250px` }}
     //           />
-    //         </Box> 
+    //         </Box>
     //       </Grid>
     //     ))}
     //   </Container>
