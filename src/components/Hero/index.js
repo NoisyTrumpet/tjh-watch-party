@@ -59,7 +59,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
-              maxWidth={[`120px`, `200px`, `250px`, `250px`, `400px`]}
+              maxWidth={[`150px`, `200px`, `250px`, `250px`, `400px`]}
               mx={`auto`}
               py={1}
             >
@@ -82,7 +82,8 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
             </Box>
             <Box
               maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
-              pb={3}
+              pb={[2, 3]}
+              mt={[-1,0]}
             >
             <Fade bottom>
                 <GatsbyImage
@@ -160,7 +161,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  mt={4}
+                  mt={[2]}
                   fontSize={[`2xl`, `3xl`, `5xl`]}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"

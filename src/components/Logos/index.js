@@ -73,7 +73,9 @@ const Logos = () => {
             placeItems={`center`}
             templateColumns={["repeat(2, auto)", "repeat(4, auto)"]}
             templateRows={["repeat(2, 1fr)", "repeat(1, 1fr)"]}
-            gridGap={6}
+            gridGap={[1,6]}
+            // rowGap={3}
+            // columnGap={6}
             className="logoContainer"
             px={2}
             mx="auto"

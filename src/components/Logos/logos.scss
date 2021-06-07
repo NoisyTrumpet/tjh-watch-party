@@ -5,3 +5,12 @@
 .logoItemLg {
     width: 80%;
 }
+
+@media screen and (max-width: 768px) {
+    .logoItemLg {
+        width: 70%;
+    }
+    .logoItem img {
+        width: 80%;
+    }
+}

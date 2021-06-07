@@ -27,7 +27,7 @@ const Footer = () => {
       role="contentinfo"
       mx="auto"
       maxW="7xl"
-      py="12"
+      py={[0, 0, 12]}
       px={{
         base: "4",
         md: "8",
@@ -38,7 +38,7 @@ const Footer = () => {
         display={`grid`}
         placeItems={`center`}
         templateColumns={["repeat(1, auto)","repeat(2, auto)", "auto 50% auto"]}
-        templateRows={["repeat(3, 1fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
+        templateRows={["repeat(3, .5fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
         gridGap={6}
         px={2}
         mx="auto"
@@ -126,7 +126,7 @@ const Footer = () => {
           /> */}
           {/* </Stack>
         </Stack> */}
-        <Stack justifyContent="center" alignItems="center">
+        <Stack justifyContent="center" alignItems="center" pb={6}>
           {/* <ThemeToggle /> */}
           <Copyright alignSelf={`center`} />
           {/* <SocialMediaLinks /> */}

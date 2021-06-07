@@ -34,8 +34,8 @@ const IndexPage = ({ data }) => {
         date={date}
         vs={vs}
       />
-      <Logos />
       <Bands bands={bands} />
+      <Logos />
     </Layout>
   );
 };
