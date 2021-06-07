@@ -53,7 +53,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
           placeItems="center"
           height={`100%`}
           width={`60vw`}
-          py={[3, 5, 5, 5]}
+          py={2}
           mx={`auto`}
           className="contBGspace"
         >
@@ -164,15 +164,27 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   fontSize={[`2xl`, `3xl`, `5xl`]}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
+                  lineHeight={1}
                   fontWeight={"900"}
                 >
                   {date}
                 </Text>
               </Fade>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
+                  letterSpacing="widest"
+                  fontWeight={800}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                >
+                  $10 PER PERSON
+                </Text>
+              </Fade>
             </Box>
             <Tada>
               <Button
-                bg="tjhRed"
+                bg="primary"
                 // rounded="full"
                 color="#fff"
                 letterSpacing="2px"

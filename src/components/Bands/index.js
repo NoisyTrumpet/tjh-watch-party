@@ -34,7 +34,7 @@ const Bands = ({ bands }) => {
               >
                 {band.name}
               </Text>
-              {/* <Text letterSpacing="wide">{band.headshot.description}</Text> */}
+              <Text letterSpacing="wide">{band.headshot.description}</Text>
             </Box>
 
             <Box>
