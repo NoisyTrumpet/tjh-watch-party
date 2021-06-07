@@ -109,7 +109,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   letterSpacing="widest"
                   lineHeight={1}
                   fontWeight={800}
-                  textShadow={`0 5px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                 >
                   Freeman Colliseum
                 </Text>
@@ -120,7 +120,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
-                  textShadow={`0 5px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                 >
                   San Antonio, Texas
                 </Text>
@@ -160,8 +160,9 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`2xl`, `3xl`, `5xl`, `7xl`, `8xl`]}
-                  textShadow={`0 6px 1px rgb(0 0 1 / 100%)`}
+                  mt={4}
+                  fontSize={[`2xl`, `3xl`, `5xl`]}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   fontWeight={"900"}
                 >
