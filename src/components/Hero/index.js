@@ -107,7 +107,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   letterSpacing="widest"
                   lineHeight={1}
                   fontWeight={800}
-                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                 >
                   Freeman Colliseum
                 </Text>
@@ -118,7 +118,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
-                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                 >
                   San Antonio, Texas
                 </Text>
