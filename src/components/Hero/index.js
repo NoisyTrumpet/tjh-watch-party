@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
-import "./hero.scss"
+import "./hero.scss";
 
 const Hero = ({ fighters, title, date, background, logo, vs }) => {
   return (
@@ -80,6 +80,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 Thomas J. Henry World Championship Watch Party
               </Heading>
             </Box>
+<<<<<<< HEAD
             <Box
               maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
               pb={[2, 3]}
@@ -90,6 +91,11 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   image={vs}
                   alt={"VS logo"}
                 />
+=======
+            <Box maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]} pb={3}>
+              <Fade bottom>
+                <GatsbyImage image={vs} alt={"VS logo"} />
+>>>>>>> 878dad33904d143ff6f74250d85496962f7605c4
               </Fade>
             </Box>
             <Box
@@ -206,7 +212,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
         </Box>
       </Box>
 
-      <Box display="grid"  style={{ gridArea: "1/1" }}>
+      <Box display="grid" style={{ gridArea: "1/1" }}>
         <GatsbyImage
           className="art-directed"
           image={background}

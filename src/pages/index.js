@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
   const bands = data.allContentfulBand;
   return (
     <Layout>
-      <Seo title={`Thomas J. Henry Watch Party`} />
+      <Seo title={`Thomas J. Henry Watch Party`} description={`Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`} />
       <Hero
         background={heroImages}
         fighters={fighters}
@@ -44,28 +44,28 @@ export default IndexPage;
 
 export const query = graphql`
   query HomeQuery {
-    mobileImage: file(relativePath: {eq: "bg_mobile.jpg"}) {
-    id
-    childImageSharp {
-      gatsbyImageData(
-        quality: 90
-        layout: CONSTRAINED
-        formats: WEBP
-        placeholder: BLURRED
-      )
+    mobileImage: file(relativePath: { eq: "bg_mobile.jpg" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          quality: 90
+          layout: CONSTRAINED
+          formats: WEBP
+          placeholder: BLURRED
+        )
+      }
     }
-  }
-  vsImage: file(relativePath: {eq: "vs.png"}) {
-    id
-    childImageSharp {
-      gatsbyImageData(
-        quality: 90
-        layout: CONSTRAINED
-        formats: WEBP
-        placeholder: BLURRED
-      )
+    vsImage: file(relativePath: { eq: "vs.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          quality: 90
+          layout: CONSTRAINED
+          formats: WEBP
+          placeholder: BLURRED
+        )
+      }
     }
-  }
     contentfulComponentHero {
       bg_image {
         gatsbyImageData(

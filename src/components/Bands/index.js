@@ -9,7 +9,7 @@ const Bands = ({ bands }) => {
       <Text
         textAlign="center"
         letterSpacing="widest"
-        fontSize={[`2xl`, `2xl`, `4xl`]}
+        fontSize={[`xl`, `2xl`, `4xl`]}
         textTransform={`uppercase`}
         color={`primary`}
         w={"98%"}
@@ -38,7 +38,11 @@ const Bands = ({ bands }) => {
             </Box>
 
             <Box>
-              <GatsbyImage image={getImage(band.headshot)} alt={band.name} style={{maxWidth: `250px`}}/>
+              <GatsbyImage
+                image={getImage(band.headshot)}
+                alt={band.name}
+                style={{ maxWidth: `250px` }}
+              />
             </Box>
           </Grid>
         ))}
