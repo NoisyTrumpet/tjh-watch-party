@@ -162,7 +162,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   lineHeight={1}
-                  mt={2}
+                mt={[2, 4, 6]}
                   fontWeight={"900"}
                 >
                   {date}
