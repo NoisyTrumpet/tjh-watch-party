@@ -130,11 +130,11 @@ const Footer = () => {
           /> */}
       {/* </Stack>
         </Stack> */}
-        <Stack justifyContent="center" alignItems="center" pb={6}>
-          {/* <ThemeToggle /> */}
-          <Copyright alignSelf={`center`} />
-          {/* <SocialMediaLinks /> */}
-        </Stack>
+      <Stack justifyContent="center" alignItems="center" pb={6}>
+        {/* <ThemeToggle /> */}
+        <Copyright alignSelf={`center`} />
+        {/* <SocialMediaLinks /> */}
+      </Stack>
       {/* </Stack> */}
     </Box>
   );

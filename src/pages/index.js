@@ -25,7 +25,10 @@ const IndexPage = ({ data }) => {
   const bands = data.allContentfulBand;
   return (
     <Layout>
-      <Seo title={`Thomas J. Henry Watch Party`} description={`Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`} />
+      <Seo
+        title={`Thomas J. Henry Watch Party`}
+        description={`Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
+      />
       <Hero
         background={heroImages}
         fighters={fighters}

@@ -83,13 +83,10 @@ const Hero = ({ title, date, background, logo, vs }) => {
             <Box
               maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
               pb={[2, 3]}
-              mt={[-1,0]}
+              mt={[-1, 0]}
             >
-            <Fade bottom>
-                <GatsbyImage
-                  image={vs}
-                  alt={"VS logo"}
-                />
+              <Fade bottom>
+                <GatsbyImage image={vs} alt={"VS logo"} />
               </Fade>
             </Box>
             <Box
