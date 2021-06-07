@@ -112,6 +112,14 @@ export const query = graphql`
           )
           description
         }
+        largeGraphic {
+          gatsbyImageData(
+            formats: WEBP
+            layout: CONSTRAINED
+            quality: 100
+            placeholder: BLURRED
+          )
+        }
         name
       }
     }
