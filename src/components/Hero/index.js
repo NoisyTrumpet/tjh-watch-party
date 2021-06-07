@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
-import "./hero.scss"
+import "./hero.scss";
 
 const Hero = ({ fighters, title, date, background, logo, vs }) => {
   return (
@@ -53,7 +53,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
           placeItems="center"
           height={`100%`}
           width={`60vw`}
-          py={[3, 5, 5, 5]}
+          py={2}
           mx={`auto`}
           className="contBGspace"
         >
@@ -80,15 +80,9 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 Thomas J. Henry World Championship Watch Party
               </Heading>
             </Box>
-            <Box
-              maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
-              pb={3}
-            >
-            <Fade bottom>
-                <GatsbyImage
-                  image={vs}
-                  alt={"VS logo"}
-                />
+            <Box maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]} pb={3}>
+              <Fade bottom>
+                <GatsbyImage image={vs} alt={"VS logo"} />
               </Fade>
             </Box>
             <Box
@@ -164,15 +158,27 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                   fontSize={[`2xl`, `3xl`, `5xl`]}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
+                  lineHeight={1}
                   fontWeight={"900"}
                 >
                   {date}
                 </Text>
               </Fade>
+              <Fade bottom>
+                <Text
+                  color={`white`}
+                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
+                  letterSpacing="widest"
+                  fontWeight={800}
+                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                >
+                  $10 PER PERSON
+                </Text>
+              </Fade>
             </Box>
             <Tada>
               <Button
-                bg="tjhRed"
+                bg="primary"
                 // rounded="full"
                 color="#fff"
                 letterSpacing="2px"
@@ -193,7 +199,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
         </Box>
       </Box>
 
-      <Box display="grid"  style={{ gridArea: "1/1" }}>
+      <Box display="grid" style={{ gridArea: "1/1" }}>
         <GatsbyImage
           className="art-directed"
           image={background}

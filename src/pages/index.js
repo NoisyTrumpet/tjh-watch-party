@@ -44,28 +44,28 @@ export default IndexPage;
 
 export const query = graphql`
   query HomeQuery {
-    mobileImage: file(relativePath: {eq: "bg_mobile.jpg"}) {
-    id
-    childImageSharp {
-      gatsbyImageData(
-        quality: 90
-        layout: CONSTRAINED
-        formats: WEBP
-        placeholder: BLURRED
-      )
+    mobileImage: file(relativePath: { eq: "bg_mobile.jpg" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          quality: 90
+          layout: CONSTRAINED
+          formats: WEBP
+          placeholder: BLURRED
+        )
+      }
     }
-  }
-  vsImage: file(relativePath: {eq: "vs.png"}) {
-    id
-    childImageSharp {
-      gatsbyImageData(
-        quality: 90
-        layout: CONSTRAINED
-        formats: WEBP
-        placeholder: BLURRED
-      )
+    vsImage: file(relativePath: { eq: "vs.png" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          quality: 90
+          layout: CONSTRAINED
+          formats: WEBP
+          placeholder: BLURRED
+        )
+      }
     }
-  }
     contentfulComponentHero {
       bg_image {
         gatsbyImageData(

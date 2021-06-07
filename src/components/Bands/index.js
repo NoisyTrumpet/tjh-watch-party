@@ -34,11 +34,15 @@ const Bands = ({ bands }) => {
               >
                 {band.name}
               </Text>
-              {/* <Text letterSpacing="wide">{band.headshot.description}</Text> */}
+              <Text letterSpacing="wide">{band.headshot.description}</Text>
             </Box>
 
             <Box>
-              <GatsbyImage image={getImage(band.headshot)} alt={band.name} style={{maxWidth: `250px`}}/>
+              <GatsbyImage
+                image={getImage(band.headshot)}
+                alt={band.name}
+                style={{ maxWidth: `250px` }}
+              />
             </Box>
           </Grid>
         ))}
