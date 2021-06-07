@@ -81,7 +81,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
               </Heading>
             </Box>
             <Box
-              maxWidth={[`50px`, `80px`, `100px`, `100px`, `150px`]}
+              maxWidth={[`40px`, `80px`, `100px`, `100px`, `150px`]}
               pb={[2, 3]}
               mt={[-1, 0]}
             >
@@ -159,10 +159,10 @@ const Hero = ({ title, date, background, logo, vs }) => {
                 <Text
                   color={`white`}
                   fontSize={[`2xl`, `3xl`, `5xl`]}
-                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   lineHeight={1}
-                  mt={4}
+                  mt={2}
                   fontWeight={"900"}
                 >
                   {date}
@@ -174,13 +174,13 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
-                  textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                 >
                   $10 PER PERSON
                 </Text>
               </Fade>
             </Box>
-            <Tada>
+            <Tada delay={1000}>
               <Button
                 bg="primary"
                 // rounded="full"
@@ -190,7 +190,6 @@ const Hero = ({ title, date, background, logo, vs }) => {
                 lineHeight={1}
                 px={[4, 4, 6, 10]}
                 py={[4, 4, 6, 10]}
-                mt={2}
                 as="a"
                 fontWeight={900}
                 href="https://purchase.growtix.com/eh/TJH_WATCH_PARTY"
