@@ -6,7 +6,7 @@ import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
 import "./hero.scss";
 
-const Hero = ({ fighters, title, date, background, logo, vs }) => {
+const Hero = ({ title, date, background, logo, vs }) => {
   return (
     <Box display="grid">
       <Box style={{ gridArea: "1/1" }} zIndex={9} height={`fit-content`}>
@@ -59,7 +59,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
-              maxWidth={[`150px`, `200px`, `250px`, `250px`, `400px`]}
+              maxWidth={[`170px`, `200px`, `250px`, `250px`, `400px`]}
               mx={`auto`}
               py={1}
             >
@@ -161,11 +161,11 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  mt={[2]}
                   fontSize={[`2xl`, `3xl`, `5xl`]}
                   textShadow={`0 3px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   lineHeight={1}
+                  mt={4}
                   fontWeight={"900"}
                 >
                   {date}
@@ -193,7 +193,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 lineHeight={1}
                 px={[4, 4, 6, 10]}
                 py={[4, 4, 6, 10]}
-                my={0}
+                mt={2}
                 as="a"
                 fontWeight={900}
                 href="https://purchase.growtix.com/eh/TJH_WATCH_PARTY"

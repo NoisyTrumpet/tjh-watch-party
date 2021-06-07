@@ -36,17 +36,12 @@ const Footer = () => {
       <Grid
         display={`grid`}
         placeItems={`center`}
-<<<<<<< HEAD
-        templateColumns={["repeat(1, auto)","repeat(2, auto)", "auto 50% auto"]}
-        templateRows={["repeat(3, .5fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
-=======
         templateColumns={[
           "repeat(1, auto)",
           "repeat(2, auto)",
           "auto 50% auto",
         ]}
         templateRows={["repeat(3, 1fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
->>>>>>> 878dad33904d143ff6f74250d85496962f7605c4
         gridGap={6}
         px={2}
         mx="auto"
