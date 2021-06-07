@@ -183,7 +183,7 @@ const Hero = ({ fighters, title, date, background, logo, vs }) => {
                 my={0}
                 as="a"
                 fontWeight={900}
-                href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                href="https://purchase.growtix.com/eh/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
                 textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
               >
                 BUY TICKETS
