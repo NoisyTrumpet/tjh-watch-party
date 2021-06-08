@@ -59,7 +59,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
-              maxWidth={[`170px`, `200px`, `250px`, `250px`, `400px`]}
+              maxWidth={[`160px`, `200px`, `250px`, `250px`, `400px`]}
               mx={`auto`}
               py={1}
             >
@@ -81,9 +81,9 @@ const Hero = ({ title, date, background, logo, vs }) => {
               </Heading>
             </Box>
             <Box
-              maxWidth={[`40px`, `80px`, `100px`, `100px`, `150px`]}
-              pb={[2, 3]}
-              mt={[-1, 0]}
+              maxWidth={[`45px`, `80px`, `100px`, `100px`, `150px`]}
+              pb={[3, 5, 5, 5, 5]}
+              mt={[0, 2, 2, 2, 2]}
             >
               <Fade bottom>
                 <GatsbyImage image={vs} alt={"VS logo"} />
@@ -151,8 +151,8 @@ const Hero = ({ title, date, background, logo, vs }) => {
               // width={`fit-content`}
               px={4}
               py={[0, 1, 1, 1]}
-              mt={[-2, -2, -2, -5, -5]}
-              mb={0}
+              mt={[-2, -4, -4, -5, -5]}
+              mb={[2, 3, 6, 6, 6]}
               textTransform="uppercase"
             >
               <Fade bottom>
@@ -162,7 +162,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
                   // letterSpacing="widest"
                   lineHeight={1}
-                mt={[2, 4, 6]}
+                  mt={[2, 4, 6]}
                   fontWeight={"900"}
                 >
                   {date}
@@ -204,10 +204,9 @@ const Hero = ({ title, date, background, logo, vs }) => {
 
       <Box display="grid" style={{ gridArea: "1/1" }}>
         <GatsbyImage
-          className="art-directed"
           image={background}
           alt="Title"
-          style={{ gridArea: "1/1", maxWidth: "100%" }}
+          style={{ gridArea: "1/1" }}
         />
       </Box>
     </Box>

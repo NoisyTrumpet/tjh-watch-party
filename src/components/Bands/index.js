@@ -16,6 +16,7 @@ const Bands = ({ bands }) => {
           textTransform="uppercase"
           fontSize={[`2xl`, `4xl`, `5xl`]}
           fontWeight={"900"}
+          textShadow={`0 3px 1px rgb(0 0 1 / 100%), 1px 3px 1px rgb(0 0 1 / 100%)`}
         >
           Post Fight Concert Starring
         </Text>

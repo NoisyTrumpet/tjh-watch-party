@@ -27,7 +27,7 @@ const Footer = () => {
       role="contentinfo"
       mx="auto"
       maxW="7xl"
-      py={[0, 0, 12]}
+      py={[0, 0, 8]}
       px={{
         base: "4",
         md: "8",
@@ -41,9 +41,10 @@ const Footer = () => {
           "repeat(2, auto)",
           "auto 50% auto",
         ]}
-        templateRows={["repeat(3, 1fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
+        templateRows={["repeat(3, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
         gridGap={6}
         px={2}
+        py={4}
         mx="auto"
         mb={10}
       >
