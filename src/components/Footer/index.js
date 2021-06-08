@@ -4,7 +4,7 @@ import Copyright from "./Fragments/Copyright";
 import TJHLogo from "./Fragments/TJHLogo";
 // import { graphql, useStaticQuery } from "gatsby";
 import FooterHeading from "./Fragments/FooterHeading";
-import PMXLogo from "./Fragments/PMXLogo";
+// import PMXLogo from "./Fragments/PMXLogo";
 // import ThemeToggle from "../ThemeToggle"
 const Footer = () => {
   // const logo = useStaticQuery(graphql`
@@ -35,29 +35,38 @@ const Footer = () => {
     >
       <Grid
         display={`grid`}
-        placeItems={`center`}
-        templateColumns={[
-          "repeat(1, auto)",
-          "repeat(2, auto)",
-          "auto 50% auto",
-        ]}
-        templateRows={["repeat(3, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
+        placeItems={`start`}
+        maxW={"1000"}
+        templateColumns={{
+          base: "repeat(1, auto)",
+          md: "auto 65%",
+        }}
+        templateRows={{ base: "repeat(2, auto)", md: "repeat(1, auto)" }}
         gridGap={6}
         px={2}
         py={4}
         mx="auto"
         mb={10}
       >
-        <GridItem display={`grid`} placeItems={`center`} order={[1]}>
+        <GridItem display={`grid`} placeItems={`center`} order={[1]} w={`100%`}>
           <FooterHeading mb={2}>Sponsored By:</FooterHeading>
-          <TJHLogo style={{ maxWidth: `100%`, maxHeight: `54px` }} />
+          <a
+            href="https://thomasjhenrylaw.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <TJHLogo
+              width="130% !important"
+              height="auto !important"
+              style={{ maxHeight: `200px` }}
+            />
+          </a>
         </GridItem>
         <GridItem
           display={`grid`}
           placeItems={`center`}
-          minW={[`100%`, `100%`, `60%`]}
-          order={[3, 3, 2]}
-          colSpan={[1, 2, 1]}
+          // maxW={[`100%`, `70%`]}
+          order={2}
           textAlign="center"
         >
           <FooterHeading mb={2}>About</FooterHeading>
@@ -69,10 +78,10 @@ const Footer = () => {
             performances by special guests Lupillo Rivera and DJ Kidd Spin.
           </Text>
         </GridItem>
-        <GridItem display={`grid`} placeItems={`center`} order={[3, 2, 3]}>
+        {/* <GridItem display={`grid`} placeItems={`center`} order={[3, 2, 3]}>
           <FooterHeading mb={2}>Presented by:</FooterHeading>
           <PMXLogo style={{ maxWidth: `100%`, maxHeight: `54px` }} />
-        </GridItem>
+        </GridItem> */}
       </Grid>
 
       {/* <Stack spacing="10" divider={<StackDivider />}>
