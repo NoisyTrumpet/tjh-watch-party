@@ -19,6 +19,7 @@
     "@chakra-ui/gatsby-plugin": "^2.0.1",
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.3",
+    "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/anton": "^4.4.2",

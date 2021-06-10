@@ -84,11 +84,12 @@ const Logos = () => {
         className="gridLogos"
       >
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        // height={[`auto`, `70px`]}
-        height={`auto`}
-        width={[`80px`, `80px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          // height={[`auto`, `70px`]}
+          height={`auto`}
+          width={[`80px`, `80px`]}
+        >
           <GatsbyImage
             image={getImage(logos.kxtn.childImageSharp)}
             alt={"box logo"}
@@ -97,11 +98,12 @@ const Logos = () => {
           />
         </Box>
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        // height={[`auto`, `80px`]}
-        height={`auto`}
-        width={[`90px`, `90px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          // height={[`auto`, `80px`]}
+          height={`auto`}
+          width={[`90px`, `90px`]}
+        >
           <GatsbyImage
             image={getImage(logos.kbbt.childImageSharp)}
             alt={"box logo"}
@@ -110,10 +112,11 @@ const Logos = () => {
           />
         </Box>
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        height={`auto`}
-        width={[`180px`, `180px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          height={`auto`}
+          width={[`180px`, `180px`]}
+        >
           <GatsbyImage
             image={getImage(logos.uni.childImageSharp)}
             alt={"box logo"}
@@ -122,11 +125,12 @@ const Logos = () => {
           />
         </Box>
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        // height={[`auto`, `90px`]}
-        height={`auto`}
-        width={[`70px`, `70px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          // height={[`auto`, `90px`]}
+          height={`auto`}
+          width={[`70px`, `70px`]}
+        >
           <GatsbyImage
             image={getImage(logos.vibe.childImageSharp)}
             alt={"box logo"}
@@ -135,11 +139,12 @@ const Logos = () => {
           />
         </Box>
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        // height={[`auto`, `80px`]}
-        height={`auto`}
-        width={[`100px`, `100px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          // height={[`auto`, `80px`]}
+          height={`auto`}
+          width={[`100px`, `100px`]}
+        >
           <GatsbyImage
             image={getImage(logos.queB.childImageSharp)}
             alt={"box logo"}
@@ -148,11 +153,12 @@ const Logos = () => {
           />
         </Box>
         <Box
-        display={`grid`}
-        placeItems={`center`}
-        // height={[`auto`, `80px`]}
-        height={`auto`}
-        width={[`80px`, `80px`]}>
+          display={`grid`}
+          placeItems={`center`}
+          // height={[`auto`, `80px`]}
+          height={`auto`}
+          width={[`80px`, `80px`]}
+        >
           <GatsbyImage
             image={getImage(logos.latin.childImageSharp)}
             alt={"box logo"}

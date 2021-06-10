@@ -1,25 +1,41 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-// import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-// import { withArtDirection, getImage } from "gatsby-plugin-image";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { renderRichText } from "gatsby-source-contentful/rich-text";
+import { Container } from "@chakra-ui/layout";
 
 const FAQ = ({ data }) => {
-    const faqs = data.allContentfulFaQs;
+  const faqs = data.allContentfulFaQs;
+  const Bold = ({ children }) => (
+    <p style={{ fontWeight: "bold" }}>{children}</p>
+  );
+  const Text = ({ children }) => <p>{children}</p>;
+
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    },
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    },
+  };
   return (
     <Layout>
       <Seo
         title={`Thomas J. Henry Watch Party FAQs`}
         description={`Thomas J. Henry Watch Party FAQs`}
       />
-
-        {/* {faqs.nodes.map((fAq) => (
-        <h2>{fAq.question}</h2>
-        <p>{fAq.answer}</p>
-        ))} */}
-
-      </Layout>
+      <Container>
+        {faqs.nodes.map((item) => (
+          <>
+            <h2>{item.question}</h2>
+            {renderRichText(item.answer, options)}
+          </>
+        ))}
+      </Container>
+    </Layout>
   );
 };
 
@@ -28,12 +44,12 @@ export default FAQ;
 export const query = graphql`
   query FaqQuery {
     allContentfulFaQs {
-        nodes {
-          question
-          answer {
-            raw
-          }
+      nodes {
+        question
+        answer {
+          raw
         }
       }
+    }
   }
 `;
