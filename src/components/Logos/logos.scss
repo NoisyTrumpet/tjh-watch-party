@@ -1,16 +1,26 @@
-.logoContainer {
-    width: fit-content;
+// .logoContainer {
+//     background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(255,255,255,0) 100%);
+// }
+
+.logoItem img {
+    object-fit: contain !important;
 }
 
-.logoItemLg {
-    width: 80%;
-}
-
-@media screen and (max-width: 768px) {
-    .logoItemLg {
-        width: 70%;
+@media screen and (min-width: 1025px) {
+    .gridLogos {
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows: repeat(1, auto);
     }
-    .logoItem img {
-        width: 80%;
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+    .gridLogos {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+@media screen and (max-width: 639px) {
+    .gridLogos {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
     }
 }

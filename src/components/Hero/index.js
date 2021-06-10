@@ -4,69 +4,33 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Fade from "react-reveal/Fade";
 import Tada from "react-reveal/Tada";
+import Logos from "../Logos";
 import "./hero.scss";
 
 const Hero = ({ title, date, background, logo, vs }) => {
   return (
     <Box display="grid">
-      <Box style={{ gridArea: "1/1" }} zIndex={9} height={`fit-content`}>
-        {/* <Box
-          backgroundColor="#000000"
-          color="white"
-          justifyContent="space-between"
-          height={`fit-content`}
-          py={4}
-          display={`none`}
-        >
-          <Box textAlign="center" minWidth={`48%`}>
-            <Text
-              fontSize={`3xl`}
-              textTransform="uppercase"
-              fontWeight="normal"
-            >
-              {fighters[0].name}
-            </Text>
-          </Box>
-          <Box
-            textAlign="center"
-            minWidth={`4%`}
-            display="grid"
-            placeItems="center"
-          >
-            <Text fontWeight="light" fontSize="xl">
-              VS
-            </Text>
-          </Box>
-          <Box textAlign="center" minWidth={`48%`}>
-            {" "}
-            <Text
-              fontSize={`3xl`}
-              textTransform="uppercase"
-              fontWeight="normal"
-            >
-              {fighters[1].name}
-            </Text>
-          </Box>
-        </Box> */}
+      <Box style={{ gridArea: "1/1" }} zIndex={9} className="logoContainer">
         <Box
           display="grid"
           placeItems="center"
           height={`100%`}
-          width={`60vw`}
+          width={[`80vw`, `60vw`]}
           py={2}
           mx={`auto`}
-          className="contBGspace"
+          // className="contBGspace"
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
-              maxWidth={[`160px`, `200px`, `250px`, `250px`, `400px`]}
+              // maxWidth={[`160px`, `200px`, `250px`, `400px`, `400px`]}
+              maxWidth={`80%`}
               mx={`auto`}
               py={1}
             >
               <Fade bottom>
                 <GatsbyImage
                   image={getImage(logo)}
-                  alt={"Thomas J. Henry World Championship Watch Party"}
+                  alt={"Thomas J. Henry Music Fest Party"}
                 />
               </Fade>
             </Box>
@@ -77,17 +41,8 @@ const Hero = ({ title, date, background, logo, vs }) => {
                 display={["none"]}
                 color={`white`}
               >
-                Thomas J. Henry World Championship Watch Party
+                Thomas J. Henry Music Fest Party
               </Heading>
-            </Box>
-            <Box
-              maxWidth={[`45px`, `80px`, `100px`, `100px`, `150px`]}
-              pb={[3, 5, 5, 5, 5]}
-              mt={[0, 2, 2, 2, 2]}
-            >
-              <Fade bottom>
-                <GatsbyImage image={vs} alt={"VS logo"} />
-              </Fade>
             </Box>
             <Box
               textAlign="center"
@@ -96,8 +51,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
               // width={`fit-content`}
               px={4}
               py={[0, 1, 1, 1]}
-              mt={0}
-              mb={[0, -2, -1, -1]}
+              my={5}
               textTransform="uppercase"
             >
               <Fade bottom>
@@ -105,9 +59,9 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   color={`white`}
                   fontSize={[`md`, `2xl`, `3xl`, `4xl`, `5xl`]}
                   letterSpacing="widest"
-                  lineHeight={1}
+                  lineHeight={1.2}
                   fontWeight={800}
-                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
                 >
                   Freeman Colliseum
                 </Text>
@@ -115,54 +69,22 @@ const Hero = ({ title, date, background, logo, vs }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
+                  fontSize={[`md`, `lg`, `2xl`, `3xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
-                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
                 >
                   San Antonio, Texas
                 </Text>
               </Fade>
-            </Box>
-            <Box
-              backgroundColor={["blackAlpha.700", `#000000`]}
-              textAlign="center"
-              color="secondary"
-              fontWeight={300}
-              // width={`fit-content`}
-              px={[2, 4, 6, 4]}
-              py={[1, 1, 2, 2]}
-              my={0}
-              textTransform="uppercase"
-            >
-              <Fade bottom cascade>
-                <Text
-                  fontSize={[`10px`, `sm`, `lg`, `2xl`, `3xl`]}
-                  textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
-                >
-                  {title}
-                </Text>
-              </Fade>
-            </Box>
-            <Box
-              textAlign="center"
-              color="secondary"
-              fontWeight={300}
-              // width={`fit-content`}
-              px={4}
-              py={[0, 1, 1, 1]}
-              mt={[-2, -4, -4, -5, -5]}
-              mb={[2, 3, 6, 6, 6]}
-              textTransform="uppercase"
-            >
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`2xl`, `3xl`, `5xl`]}
-                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
+                  fontSize={[`2xl`, `3xl`, `5xl`, `6xl`, `7xl`]}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
                   // letterSpacing="widest"
-                  lineHeight={1}
-                  mt={[2, 4, 6]}
+                  lineHeight={1.2}
+                  // mt={[2, 4, 6]}
                   fontWeight={"900"}
                 >
                   {date}
@@ -171,12 +93,15 @@ const Hero = ({ title, date, background, logo, vs }) => {
               <Fade bottom>
                 <Text
                   color={`white`}
-                  fontSize={[`12px`, `lg`, `2xl`, `2xl`, `3xl`]}
+                  fontSize={[`md`, `lg`, `2xl`, `3xl`, `3xl`]}
                   letterSpacing="widest"
                   fontWeight={800}
-                  textShadow={`0 2px 1px rgb(0 0 1 / 100%)`}
+                  textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
+                  my={0}
+                  py={0}
+                  lineHeight={1.5}
                 >
-                  $10 PER PERSON
+                  $10 PER PERSON - Doors Open 6:00pm
                 </Text>
               </Fade>
             </Box>
@@ -193,16 +118,17 @@ const Hero = ({ title, date, background, logo, vs }) => {
                 as="a"
                 fontWeight={900}
                 href="https://purchase.growtix.com/eh/TJH_WATCH_PARTY"
-                textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
+                textShadow={`1px 1px 2px rgba(0,0,0,0.7), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
               >
                 BUY TICKETS
               </Button>
             </Tada>
+            <Logos />
           </Box>
         </Box>
       </Box>
 
-      <Box display="grid" style={{ gridArea: "1/1" }}>
+      <Box display="grid" style={{ gridArea: "1/1" }} maxHeight={`98vh`} overflow={`hidden`}>
         <GatsbyImage
           image={background}
           alt="Title"

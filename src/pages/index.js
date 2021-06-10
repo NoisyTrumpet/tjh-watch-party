@@ -4,19 +4,18 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Bands from "../components/Bands";
-import Logos from "../components/Logos";
 import { withArtDirection, getImage } from "gatsby-plugin-image";
 
 const IndexPage = ({ data }) => {
   // Hero Data:
-  const mobileImageGet = getImage(data.mobileImage.childImageSharp);
+  // const mobileImageGet = getImage(data.mobileImage.childImageSharp);
   const desktopImageGet = getImage(data.contentfulComponentHero.bg_image);
-  const heroImages = withArtDirection(desktopImageGet, [
-    {
-      media: "(max-width: 1024px)",
-      image: mobileImageGet,
-    },
-  ]);
+  // const heroImages = withArtDirection(desktopImageGet, [
+  //   {
+  //     media: "(max-width: 1024px)",
+  //     image: mobileImageGet,
+  //   },
+  // ]);
   const vs = getImage(data.vsImage.childImageSharp);
   const fighters = data.contentfulComponentHero.fighterInfo;
   const heroTitle = data.contentfulComponentHero.title;
@@ -30,7 +29,7 @@ const IndexPage = ({ data }) => {
         description={`Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
       />
       <Hero
-        background={heroImages}
+        background={desktopImageGet}
         fighters={fighters}
         title={heroTitle}
         logo={logo}
@@ -38,7 +37,6 @@ const IndexPage = ({ data }) => {
         vs={vs}
       />
       <Bands bands={bands} />
-      <Logos />
     </Layout>
   );
 };

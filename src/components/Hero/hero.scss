@@ -1,54 +1,58 @@
-@media screen and (min-width: 1300px) {
-    .contBGspace {
-        margin-top: .5%;
-        margin-bottom: 1%;
-    }
+.logoContainer {
+    background: linear-gradient(0deg, rgba(0,0,0,.6) 0%, rgba(255,255,255,0) 25%);
 }
-@media screen and (max-width: 1024px) {
-    .contBGspace {
-        margin-top: 10%;
-        margin-bottom: 10%;
-    }
-}
-@media screen and (max-width: 840px) {
-    .contBGspace {
-        margin-top: 4%;
-        margin-bottom: 8%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .contBGspace {
-        margin-top: 6%;
-        margin-bottom: 6%;
-    }
-}
-@media screen and (max-width: 680px) {
-    .contBGspace {
-        margin-top: 8%;
-        margin-bottom: 8%;
-    }
-}
-@media screen and (max-width: 640px) {
-    .contBGspace {
-        margin-top: 14%;
-        margin-bottom: 14%;
-    }
-}
-@media screen and (max-width: 524px) {
-    .contBGspace {
-        margin-top: 10%;
-        margin-bottom: 10%;
-    }
-}
-@media screen and (max-width: 460px) {
-    .contBGspace {
-        margin-top: 6%;
-        margin-bottom: 6%;
-    }
-}
-@media screen and (max-width: 400px) {
-    .contBGspace {
-        margin-top: 1%;
-        margin-bottom: 2%;
-    }
-}
+
+// @media screen and (min-width: 1300px) {
+//     .contBGspace {
+//         margin-top: .5%;
+//         margin-bottom: .5%;
+//     }
+// }
+// @media screen and (max-width: 1024px) {
+//     .contBGspace {
+//         margin-top: 8%;
+//         margin-bottom: 8%;
+//     }
+// }
+// @media screen and (max-width: 840px) {
+//     .contBGspace {
+//         margin-top: 4%;
+//         margin-bottom: 4%;
+//     }
+// }
+// @media screen and (max-width: 768px) {
+//     .contBGspace {
+//         margin-top: 3%;
+//         margin-bottom: 4%;
+//     }
+// }
+// @media screen and (max-width: 680px) {
+//     .contBGspace {
+//         margin-top: 7%;
+//         margin-bottom: 7%;
+//     }
+// }
+// @media screen and (max-width: 640px) {
+//     .contBGspace {
+//         margin-top: 12%;
+//         margin-bottom: 12%;
+//     }
+// }
+// @media screen and (max-width: 524px) {
+//     .contBGspace {
+//         margin-top: 9%;
+//         margin-bottom: 9%;
+//     }
+// }
+// @media screen and (max-width: 460px) {
+//     .contBGspace {
+//         margin-top: 3%;
+//         margin-bottom: 3%;
+//     }
+// }
+// @media screen and (max-width: 400px) {
+//     .contBGspace {
+//         margin-top: 0%;
+//         margin-bottom: 0%;
+//     }
+// }

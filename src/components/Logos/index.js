@@ -7,22 +7,7 @@ import "./logos.scss";
 const Logos = () => {
   const logos = useStaticQuery(graphql`
     query {
-      allFile(filter: { relativeDirectory: { eq: "logos" } }) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              gatsbyImageData(
-                quality: 90
-                placeholder: BLURRED
-                layout: CONSTRAINED
-                formats: WEBP
-              )
-            }
-          }
-        }
-      }
-      mayweather: file(relativePath: { eq: "logos/mayweather.png" }) {
+      kbbt: file(relativePath: { eq: "logos/kbbt_logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: CONSTRAINED
@@ -32,7 +17,7 @@ const Logos = () => {
           )
         }
       }
-      showtime: file(relativePath: { eq: "logos/showtime.png" }) {
+      kxtn: file(relativePath: { eq: "logos/kxtn_logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: CONSTRAINED
@@ -42,7 +27,7 @@ const Logos = () => {
           )
         }
       }
-      gtb: file(relativePath: { eq: "logos/gtb.png" }) {
+      queB: file(relativePath: { eq: "logos/queB_logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: CONSTRAINED
@@ -52,7 +37,27 @@ const Logos = () => {
           )
         }
       }
-      gtd: file(relativePath: { eq: "logos/gtd.png" }) {
+      uni: file(relativePath: { eq: "logos/uni_logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            quality: 90
+            formats: WEBP
+          )
+        }
+      }
+      vibe: file(relativePath: { eq: "logos/vibe_logo.png" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            quality: 90
+            formats: WEBP
+          )
+        }
+      }
+      latin: file(relativePath: { eq: "logos/latinMix_logo.png" }) {
         childImageSharp {
           gatsbyImageData(
             layout: CONSTRAINED
@@ -66,43 +71,93 @@ const Logos = () => {
   `);
 
   return (
-    <Box py={4} width={`100%`} backgroundColor={`black`}>
+    <Box py={4} width={`100%`}>
       <Grid
         display={`grid`}
         placeItems={`center`}
-        templateColumns={["repeat(2, .7fr)", ".7fr auto auto .7fr"]}
-        templateRows={["repeat(2, auto)", "repeat(1, auto)"]}
-        gridGap={[1, 6]}
-        className="logoContainer"
+        // templateColumns={["repeat(2, auto)", "repeat(3, auto)", "repeat(6, auto)"]}
+        // templateRows={["repeat(3, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
+        gridGap={[2, 6]}
         px={2}
+        mt={5}
         mx="auto"
+        className="gridLogos"
       >
-        <Box display={`grid`} placeItems={`center`}>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        // height={[`auto`, `70px`]}
+        height={`auto`}
+        width={[`80px`, `80px`]}>
           <GatsbyImage
-            image={getImage(logos.mayweather.childImageSharp)}
+            image={getImage(logos.kxtn.childImageSharp)}
             alt={"box logo"}
-            style={{ maxWidth: "100%" }}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
           />
         </Box>
-        <Box display={`grid`} placeItems={`center`}>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        // height={[`auto`, `80px`]}
+        height={`auto`}
+        width={[`90px`, `90px`]}>
           <GatsbyImage
-            image={getImage(logos.gtd.childImageSharp)}
+            image={getImage(logos.kbbt.childImageSharp)}
             alt={"box logo"}
-            style={{ maxWidth: "100%" }}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
           />
         </Box>
-        <Box display={`grid`} placeItems={`center`}>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        height={`auto`}
+        width={[`180px`, `180px`]}>
           <GatsbyImage
-            image={getImage(logos.gtb.childImageSharp)}
+            image={getImage(logos.uni.childImageSharp)}
             alt={"box logo"}
-            style={{ maxWidth: "100%" }}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
           />
         </Box>
-        <Box display={`grid`} placeItems={`center`}>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        // height={[`auto`, `90px`]}
+        height={`auto`}
+        width={[`70px`, `70px`]}>
           <GatsbyImage
-            image={getImage(logos.showtime.childImageSharp)}
+            image={getImage(logos.vibe.childImageSharp)}
             alt={"box logo"}
-            style={{ maxWidth: "100%" }}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
+          />
+        </Box>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        // height={[`auto`, `80px`]}
+        height={`auto`}
+        width={[`100px`, `100px`]}>
+          <GatsbyImage
+            image={getImage(logos.queB.childImageSharp)}
+            alt={"box logo"}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
+          />
+        </Box>
+        <Box
+        display={`grid`}
+        placeItems={`center`}
+        // height={[`auto`, `80px`]}
+        height={`auto`}
+        width={[`80px`, `80px`]}>
+          <GatsbyImage
+            image={getImage(logos.latin.childImageSharp)}
+            alt={"box logo"}
+            style={{ width: "auto", height: "100%" }}
+            className="logoItem"
           />
         </Box>
       </Grid>
