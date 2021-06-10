@@ -22,7 +22,7 @@ const Footer = () => {
       <Grid
         display={`grid`}
         placeItems={`start`}
-        maxW={"80%"}
+        maxW={"100%"}
         templateColumns={{
           base: "repeat(1, auto)",
           md: "auto 65%",
