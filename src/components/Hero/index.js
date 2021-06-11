@@ -22,8 +22,8 @@ const Hero = ({ title, date, background, logo, vs }) => {
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
-              // maxWidth={[`160px`, `200px`, `250px`, `400px`, `400px`]}
-              maxWidth={`80%`}
+              maxWidth={[`300px`, `300px`, `450px`, `600px`, `600px`]}
+              // maxWidth={`80%`}
               mx={`auto`}
               py={1}
             >
@@ -128,7 +128,12 @@ const Hero = ({ title, date, background, logo, vs }) => {
         </Box>
       </Box>
 
-      <Box display="grid" style={{ gridArea: "1/1" }} maxHeight={`98vh`} overflow={`hidden`}>
+      <Box
+      display="grid"
+      style={{ gridArea: "1/1" }}
+      maxHeight={`98vh`} 
+      overflow={`hidden`}
+      >
         <GatsbyImage
           image={background}
           alt="Title"
