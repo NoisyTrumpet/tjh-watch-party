@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Seo
         title={`Thomas J. Henry Music Fest`}
-        description={`Thomas J Henry Music Fest featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
+        description={`Thomas J Henry Music Fest on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
       />
       <Hero
         background={desktopImageGet}

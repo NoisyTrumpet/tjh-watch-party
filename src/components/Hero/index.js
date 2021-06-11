@@ -111,7 +111,7 @@ const Hero = ({ date, background, logo }) => {
                 py={[4, 4, 6, 10]}
                 as="a"
                 fontWeight={900}
-                href="https://purchase.growtix.com/eh/TJH_WATCH_PARTY"
+                href="https://purchase.growtix.com/eh/TJH_MUSICFEST"
                 textShadow={`1px 1px 2px rgba(0,0,0,0.7), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
               >
                 BUY TICKETS

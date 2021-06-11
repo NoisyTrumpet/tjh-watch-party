@@ -46,7 +46,7 @@ const Header = () => {
                 maxWidth={[`100px`, `150px`, `200px`]}
               >
                 <VisuallyHidden>
-                  Thomas J. Henry World Championship Watch Party
+                  Thomas J. Henry Music Fest Party
                 </VisuallyHidden>
                 {/* <GatsbyImage
                   image={getImage(logo.logo.logo)}
@@ -82,7 +82,7 @@ const Header = () => {
                   letterSpacing="2px"
                   fontSize="xl"
                   as="a"
-                  href="https://purchase.growtix.com/events/landing/GERVONTA_DAVIS_VS_MARIO_BARRIOS_WATCH_PARTY"
+                  href="https://purchase.growtix.com/eh/TJH_MUSICFEST"
                   textShadow={`1px 1px 2px rgba(0,0,0,0.7)`}
                 >
                   BUY TICKETS
