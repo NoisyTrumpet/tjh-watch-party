@@ -1,9 +1,34 @@
 import { Box, Text } from "@chakra-ui/layout";
 import React from "react";
-// import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const Bands = ({ bands }) => {
+const Bands = () => {
+  const bands = useStaticQuery(graphql`
+    query {
+      left: file(relativePath: { eq: "bands/MusicFest_leftBanner.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            quality: 90
+            formats: WEBP
+          )
+        }
+      }
+      right: file(relativePath: { eq: "bands/MusicFest_rightBanner.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: BLURRED
+            quality: 90
+            formats: WEBP
+          )
+        }
+      }
+    }
+  `);
+
   return (
     <Box w={`100vw`}>
       <Box bgColor="black" p={4}>
@@ -11,68 +36,37 @@ const Bands = ({ bands }) => {
           color="#fff"
           textAlign="center"
           as="h2"
-          maxW={`100%`}
+          maxW={`90%`}
           mx={`auto`}
           textTransform="uppercase"
           fontSize={[`2xl`, `4xl`, `5xl`]}
           fontWeight={"900"}
           textShadow={`0 3px 1px rgb(0 0 1 / 100%), 1px 3px 1px rgb(0 0 1 / 100%)`}
         >
-          Post Fight Concert Starring
+          The Lineup
         </Text>
       </Box>
-      {bands.nodes.map((band) => (
-        <GatsbyImage
-          image={getImage(band.largeGraphic)}
-          alt={band.name}
-          style={{ maxWidth: `100vw` }}
-        />
-      ))}
+      <Box
+        display={`grid`}
+        gridTemplateColumns={[`repeat(1, auto)`, `repeat(1, auto)`, `repeat(2, auto)`]}
+        gridTemplateRows={[`repeat(2, auto)`, `repeat(2, auto)`, `repeat(1, auto)`]}
+      >
+        <Box>
+          <GatsbyImage
+            image={getImage(bands.left.childImageSharp)}
+            alt={"Arrolladora"}
+            style={{ maxWidth: `100vw` }}
+          />
+        </Box>
+        <Box>
+          <GatsbyImage
+            image={getImage(bands.right.childImageSharp)}
+            alt={"Lupillo Rivera"}
+            style={{ maxWidth: `100vw` }}
+          />
+        </Box>
+      </Box>
     </Box>
-    // <Box my={4}>
-    //   <Text
-    //     textAlign="center"
-    //     letterSpacing="widest"
-    //     fontSize={[`xl`, `2xl`, `4xl`]}
-    //     textTransform={`uppercase`}
-    //     color={`primary`}
-    //     w={"98%"}
-    //     mx={"auto"}
-    //   >
-    //     With Musical Performances By:
-    //   </Text>
-    //   <Container>
-    //     {bands.nodes.map((band) => (
-    //       <Grid
-    //         display={`grid`}
-    //         placeItems={`center`}
-    //         templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
-    //       >
-
-    //         <Box display={`grid`} px={[4, 8, 12]}>
-    //           <Text
-    //             letterSpacing="widest"
-    //             fontSize={`3xl`}
-    //             textTransform={`uppercase`}
-    //             textShadow={`1px 1px 2px rgba(0,0,0,0.5)`}
-    //             color={`primary`}
-    //           >
-    //             {band.name}
-    //           </Text>
-    //           <Text letterSpacing="wide">{band.headshot.description}</Text>
-    //         </Box>
-
-    //         <Box>
-    //           <GatsbyImage
-    //             image={getImage(band.headshot)}
-    //             alt={band.name}
-    //             style={{ maxWidth: `250px` }}
-    //           />
-    //         </Box>
-    //       </Grid>
-    //     ))}
-    //   </Container>
-    // </Box>
   );
 };
 

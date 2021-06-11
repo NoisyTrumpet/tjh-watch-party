@@ -7,7 +7,7 @@ import Tada from "react-reveal/Tada";
 import Logos from "../Logos";
 import "./hero.scss";
 
-const Hero = ({ title, date, background, logo, vs }) => {
+const Hero = ({ date, background, logo }) => {
   return (
     <Box display="grid">
       <Box style={{ gridArea: "1/1" }} zIndex={9} className="logoContainer">
@@ -18,12 +18,10 @@ const Hero = ({ title, date, background, logo, vs }) => {
           width={[`80vw`, `60vw`]}
           py={2}
           mx={`auto`}
-          // className="contBGspace"
         >
           <Box width={`100%`} display="grid" placeItems="center">
             <Box
               maxWidth={[`300px`, `300px`, `450px`, `600px`, `600px`]}
-              // maxWidth={`80%`}
               mx={`auto`}
               py={1}
             >
@@ -48,7 +46,6 @@ const Hero = ({ title, date, background, logo, vs }) => {
               textAlign="center"
               color="secondary"
               fontWeight={300}
-              // width={`fit-content`}
               px={4}
               py={[0, 1, 1, 1]}
               my={5}
@@ -82,9 +79,7 @@ const Hero = ({ title, date, background, logo, vs }) => {
                   color={`white`}
                   fontSize={[`2xl`, `3xl`, `5xl`, `6xl`, `7xl`]}
                   textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
-                  // letterSpacing="widest"
                   lineHeight={1.2}
-                  // mt={[2, 4, 6]}
                   fontWeight={"900"}
                 >
                   {date}
@@ -108,7 +103,6 @@ const Hero = ({ title, date, background, logo, vs }) => {
             <Tada delay={1000}>
               <Button
                 bg="primary"
-                // rounded="full"
                 color="#fff"
                 letterSpacing="2px"
                 fontSize={["md", "2xl", "3xl", "4xl", "5xl"]}
@@ -131,8 +125,8 @@ const Hero = ({ title, date, background, logo, vs }) => {
       <Box
         display="grid"
         style={{ gridArea: "1/1" }}
-        maxHeight={`98vh`}
         overflow={`hidden`}
+        className="bgFix"
       >
         <GatsbyImage
           image={background}

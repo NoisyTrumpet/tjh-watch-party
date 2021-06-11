@@ -22,19 +22,16 @@ const Footer = () => {
       <Grid
         display={`grid`}
         placeItems={`start`}
-        maxW={"100%"}
-        templateColumns={{
-          base: "repeat(1, auto)",
-          md: "repeat(2, 1fr)",
-        }}
-        templateRows={{ base: "repeat(2, auto)", md: "repeat(1, auto)" }}
+        maxW={[`100%`, `100%`, `80%`]}
+        templateColumns={["repeat(1, auto)", "repeat(1, auto)", "repeat(2, auto)",]}
+        templateRows={["repeat(2, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
         gridGap={6}
         px={2}
         py={4}
         mx="auto"
         mb={10}
       >
-        <GridItem display={`grid`} placeItems={`center`} order={[1]} w={`100%`}>
+        <GridItem display={`grid`} placeItems={`center`} mx="auto">
           <FooterHeading mb={2}>Sponsored By:</FooterHeading>
           <a
             href="https://thomasjhenrylaw.com/"
@@ -51,17 +48,12 @@ const Footer = () => {
         <GridItem
           display={`grid`}
           placeItems={`center`}
-          // maxW={[`100%`, `70%`]}
-          order={2}
           textAlign="center"
+          mx="auto"
         >
           <FooterHeading mb={2}>About</FooterHeading>
           <Text maxWidth={500}>
-            Two-Division World Champion Gervonta “Tank” Davis faces off against
-            the undefeated Super Lightweight World Champion, Mario Barrios.
-            Watch live from the Freeman Coliseum at the Thomas J Henry Watch
-            Party benefiting the Boys and Girls Club of San Antonio with musical
-            performances by special guests Lupillo Rivera and DJ Kidd Spin.
+          Grammy-award winning artist Lupillo Rivera is making his way to the Alamo City for a special one-night only performance at the Thomas J. Henry Music Fest. Featuring opening performances by  La Arrolladora Banda El Limón de René Camacho. Proceeds benefit the Boys and Girls Club of San Antonio.
           </Text>
         </GridItem>
       </Grid>

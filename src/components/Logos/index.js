@@ -75,8 +75,6 @@ const Logos = () => {
       <Grid
         display={`grid`}
         placeItems={`center`}
-        // templateColumns={["repeat(2, auto)", "repeat(3, auto)", "repeat(6, auto)"]}
-        // templateRows={["repeat(3, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
         gridGap={[2, 6]}
         px={2}
         mt={5}
@@ -86,13 +84,12 @@ const Logos = () => {
         <Box
           display={`grid`}
           placeItems={`center`}
-          // height={[`auto`, `70px`]}
           height={`auto`}
           width={[`80px`, `80px`]}
         >
           <GatsbyImage
             image={getImage(logos.kxtn.childImageSharp)}
-            alt={"box logo"}
+            alt={"KXTN Tejano logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
@@ -100,13 +97,12 @@ const Logos = () => {
         <Box
           display={`grid`}
           placeItems={`center`}
-          // height={[`auto`, `80px`]}
           height={`auto`}
           width={[`90px`, `90px`]}
         >
           <GatsbyImage
             image={getImage(logos.kbbt.childImageSharp)}
-            alt={"box logo"}
+            alt={"98.5 The Beat logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
@@ -119,7 +115,7 @@ const Logos = () => {
         >
           <GatsbyImage
             image={getImage(logos.uni.childImageSharp)}
-            alt={"box logo"}
+            alt={"S.A. Univision logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
@@ -127,13 +123,12 @@ const Logos = () => {
         <Box
           display={`grid`}
           placeItems={`center`}
-          // height={[`auto`, `90px`]}
           height={`auto`}
           width={[`70px`, `70px`]}
         >
           <GatsbyImage
             image={getImage(logos.vibe.childImageSharp)}
-            alt={"box logo"}
+            alt={"107.5 Vibe logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
@@ -141,13 +136,12 @@ const Logos = () => {
         <Box
           display={`grid`}
           placeItems={`center`}
-          // height={[`auto`, `80px`]}
           height={`auto`}
           width={[`100px`, `100px`]}
         >
           <GatsbyImage
             image={getImage(logos.queB.childImageSharp)}
-            alt={"box logo"}
+            alt={"92.9 Que Buena logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
@@ -155,13 +149,12 @@ const Logos = () => {
         <Box
           display={`grid`}
           placeItems={`center`}
-          // height={[`auto`, `80px`]}
           height={`auto`}
           width={[`80px`, `80px`]}
         >
           <GatsbyImage
             image={getImage(logos.latin.childImageSharp)}
-            alt={"box logo"}
+            alt={"95.1 Latino Mix logo"}
             style={{ width: "auto", height: "100%" }}
             className="logoItem"
           />
