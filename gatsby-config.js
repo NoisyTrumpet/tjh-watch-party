@@ -24,6 +24,7 @@ module.exports = {
         trackingId: "li5mgmt7fxkb",
       },
     },
+    `@contentful/gatsby-transformer-contentful-richtext`,
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
