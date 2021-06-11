@@ -61,13 +61,8 @@ const FAQ = ({ data }) => {
             style={{ maxWidth: `100vw` }}
           />
         </Box>
-
       </Box>
-      <Container
-        maxW={`80vw`}
-        mx={`auto`}
-        py={5}
-      >
+      <Container maxW={`80vw`} mx={`auto`} py={5}>
         {faqs.nodes.map((item) => (
           <>
             <h2>{item.question}</h2>

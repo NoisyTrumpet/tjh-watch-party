@@ -57,6 +57,5 @@ export const query = graphql`
       date
       ctaLink
     }
-
   }
 `;

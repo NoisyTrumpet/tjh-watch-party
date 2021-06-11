@@ -48,8 +48,16 @@ const Bands = () => {
       </Box>
       <Box
         display={`grid`}
-        gridTemplateColumns={[`repeat(1, auto)`, `repeat(1, auto)`, `repeat(2, auto)`]}
-        gridTemplateRows={[`repeat(2, auto)`, `repeat(2, auto)`, `repeat(1, auto)`]}
+        gridTemplateColumns={[
+          `repeat(1, auto)`,
+          `repeat(1, auto)`,
+          `repeat(2, auto)`,
+        ]}
+        gridTemplateRows={[
+          `repeat(2, auto)`,
+          `repeat(2, auto)`,
+          `repeat(1, auto)`,
+        ]}
       >
         <Box>
           <GatsbyImage
