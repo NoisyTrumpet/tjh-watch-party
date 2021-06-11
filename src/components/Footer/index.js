@@ -23,7 +23,11 @@ const Footer = () => {
         display={`grid`}
         placeItems={`start`}
         maxW={[`100%`, `100%`, `80%`]}
-        templateColumns={["repeat(1, auto)", "repeat(1, auto)", "repeat(2, auto)",]}
+        templateColumns={[
+          "repeat(1, auto)",
+          "repeat(1, auto)",
+          "repeat(2, auto)",
+        ]}
         templateRows={["repeat(2, auto)", "repeat(2, auto)", "repeat(1, auto)"]}
         gridGap={6}
         px={2}
@@ -53,7 +57,11 @@ const Footer = () => {
         >
           <FooterHeading mb={2}>About</FooterHeading>
           <Text maxWidth={500}>
-          Grammy-award winning artist Lupillo Rivera is making his way to the Alamo City for a special one-night only performance at the Thomas J. Henry Music Fest. Featuring opening performances by  La Arrolladora Banda El Limón de René Camacho. Proceeds benefit the Boys and Girls Club of San Antonio.
+            Grammy-award winning artist Lupillo Rivera is making his way to the
+            Alamo City for a special one-night only performance at the Thomas J.
+            Henry Music Fest. Featuring opening performances by La Arrolladora
+            Banda El Limón de René Camacho. Proceeds benefit the Boys and Girls
+            Club of San Antonio.
           </Text>
         </GridItem>
       </Grid>

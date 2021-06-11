@@ -71,7 +71,7 @@ const Logos = () => {
   `);
 
   return (
-    <Box py={4} width={`100%`}>
+    <Box py={4} width={`100%`} ml={[`-10%`, `revert`]}>
       <Grid
         display={`grid`}
         placeItems={`center`}

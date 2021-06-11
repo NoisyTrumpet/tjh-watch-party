@@ -105,7 +105,7 @@ const Hero = ({ date, background, logo }) => {
                 bg="primary"
                 color="#fff"
                 letterSpacing="2px"
-                fontSize={["md", "2xl", "3xl", "4xl", "5xl"]}
+                fontSize={["lg", "2xl", "3xl", "4xl", "5xl"]}
                 lineHeight={1}
                 px={[4, 4, 6, 10]}
                 py={[4, 4, 6, 10]}

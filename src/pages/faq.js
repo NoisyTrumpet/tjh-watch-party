@@ -4,8 +4,9 @@ import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
-import { Box, Container, Heading, Text } from "@chakra-ui/layout";
+import { Box, Container, Heading } from "@chakra-ui/layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import "./styles/faq.scss";
 
 const FAQ = ({ data }) => {
   const faqs = data.allContentfulFaQs;
@@ -40,9 +41,9 @@ const FAQ = ({ data }) => {
           <Heading
             as="h1"
             textAlign="center"
-            fontSize={[`2xl`, `3xl`, `5xl`, `6xl`, `7xl`]}
+            fontSize={[`6xl`, `7xl`]}
             fontWeight={800}
-            textShadow={`0 2px 1px rgb(0 0 1 / 100%), 2px 2px 8px rgba(0, 0, 1, 0.5)`}
+            textShadow={`3px 0 1px rgb(0 0 1 / 100%), 0 3px 1px rgb(0 0 1 / 100%), 3px 3px 1px rgb(0 0 1 / 100%), 0 0 12px rgb(53 184 188 / 100%), 0 0 24px rgb(53 184 188 / 100%), 0 0 48px rgb(53 184 188 / 50%), 0 0 100px rgb(53 184 188 / 50%)`}
             color={`white`}
           >
             FAQs
@@ -61,18 +62,23 @@ const FAQ = ({ data }) => {
             style={{ maxWidth: `100vw` }}
           />
         </Box>
-
       </Box>
-      <Container
-        maxW={`80vw`}
-        mx={`auto`}
-        py={5}
-      >
+      <Container maxW={[`99vw`, `90vw`, `80vw`]} mx={`auto`} py={5}>
         {faqs.nodes.map((item) => (
-          <>
-            <h2>{item.question}</h2>
-            {renderRichText(item.answer, options)}
-          </>
+          <Box my={4} className="faqStyles">
+            <Box
+              as={`h2`}
+              color={`primary`}
+              fontSize={[`lg`, `xl`, `2xl`]}
+              fontWeight={800}
+              textShadow={`1px 0 1px rgb(0 0 1 / 100%), 0 1px 1px rgb(0 0 1 / 100%), 1px 1px 1px rgb(0 0 1 / 100%), 0 2px 3px rgb(0 0 1 / 30%)`}
+            >
+              {item.question}
+            </Box>
+            <Box px={6} py={2} color={`black`}>
+              {renderRichText(item.answer, options)}
+            </Box>
+          </Box>
         ))}
       </Container>
     </Layout>
