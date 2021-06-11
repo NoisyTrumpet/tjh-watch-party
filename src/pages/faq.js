@@ -6,7 +6,6 @@ import Seo from "../components/Seo";
 // import { withArtDirection, getImage } from "gatsby-plugin-image";
 
 const FAQ = ({ data }) => {
-    const faqs = data.allContentfulFaQs;
   return (
     <Layout>
       <Seo
@@ -14,12 +13,11 @@ const FAQ = ({ data }) => {
         description={`Thomas J. Henry Watch Party FAQs`}
       />
 
-        {/* {faqs.nodes.map((fAq) => (
+      {/* {faqs.nodes.map((fAq) => (
         <h2>{fAq.question}</h2>
         <p>{fAq.answer}</p>
         ))} */}
-
-      </Layout>
+    </Layout>
   );
 };
 
@@ -28,12 +26,12 @@ export default FAQ;
 export const query = graphql`
   query FaqQuery {
     allContentfulFaQs {
-        nodes {
-          question
-          answer {
-            raw
-          }
+      nodes {
+        question
+        answer {
+          raw
         }
       }
+    }
   }
 `;

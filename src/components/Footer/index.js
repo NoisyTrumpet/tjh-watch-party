@@ -25,7 +25,7 @@ const Footer = () => {
         maxW={"100%"}
         templateColumns={{
           base: "repeat(1, auto)",
-          md: "auto 65%",
+          md: "repeat(2, 1fr)",
         }}
         templateRows={{ base: "repeat(2, auto)", md: "repeat(1, auto)" }}
         gridGap={6}
@@ -56,7 +56,7 @@ const Footer = () => {
           textAlign="center"
         >
           <FooterHeading mb={2}>About</FooterHeading>
-          <Text>
+          <Text maxWidth={500}>
             Two-Division World Champion Gervonta “Tank” Davis faces off against
             the undefeated Super Lightweight World Champion, Mario Barrios.
             Watch live from the Freeman Coliseum at the Thomas J Henry Watch

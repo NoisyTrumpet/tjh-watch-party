@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Bands from "../components/Bands";
-import { withArtDirection, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 
 const IndexPage = ({ data }) => {
   // Hero Data:
@@ -25,8 +25,8 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Seo
-        title={`Thomas J. Henry Watch Party`}
-        description={`Thomas J Henry Watch Party featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
+        title={`Thomas J. Henry Music Fest`}
+        description={`Thomas J Henry Music Fest featuring Davis V Barrios WBA Super Lightweight Championship Live on Showtime PPV on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.`}
       />
       <Hero
         background={desktopImageGet}

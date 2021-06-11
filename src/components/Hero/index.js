@@ -129,10 +129,10 @@ const Hero = ({ title, date, background, logo, vs }) => {
       </Box>
 
       <Box
-      display="grid"
-      style={{ gridArea: "1/1" }}
-      maxHeight={`98vh`} 
-      overflow={`hidden`}
+        display="grid"
+        style={{ gridArea: "1/1" }}
+        maxHeight={`98vh`}
+        overflow={`hidden`}
       >
         <GatsbyImage
           image={background}
