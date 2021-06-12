@@ -4,9 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "TJH Watch Party",
+    title: "TJH Music Fest",
     author: "@NoisyTrumpet",
-    description: "TJH Watch Party Barrios Davis",
+    description:
+      "Thomas J Henry Music Fest on Saturday, June 26, 2021, in the Freeman Coliseum with entertainment by Grammy award-winning artist Lupillo Rivera and DJ Kidd Spin. Proceeds benefit the Boys and Girls Club of San Antonio.",
   },
   plugins: [
     {

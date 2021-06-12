@@ -60,8 +60,7 @@ const Footer = () => {
             Grammy-award winning artist Lupillo Rivera is making his way to the
             Alamo City for a special one-night only performance at the Thomas J.
             Henry Music Fest. Featuring opening performances by La Arrolladora
-            Banda El Limón de René Camacho. Proceeds benefit the Boys and Girls
-            Club of San Antonio.
+            Banda El Limón de René Camacho.
           </Text>
         </GridItem>
       </Grid>
